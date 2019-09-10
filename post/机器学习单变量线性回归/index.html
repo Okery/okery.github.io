@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.57.2" />
+		<title>吴恩达机器学习——单变量线性回归 &middot; LiuHe&#39;s blog</title>
+		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
+		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://okery.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://okery.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://okery.github.io/posts'>Archive</a>
+	<a href='https://okery.github.io/tags'>Tags</a>
+	<a href='https://okery.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        吴恩达机器学习——单变量线性回归
+                    </h1>
+                    <h2 class="headline">
+                    Aug 16, 2019 14:43
+                    · 85 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p><center>吴恩达机器学习——单变量线性回归</center></p>
+
+<h2 id="基本概念">基本概念</h2>
+
+<pre><code>### 假设函数
+</code></pre>
+
+<p>​   我们得到一个训练集，并用其进行某种预测时，我们可以根据训练集得出一个假设函数。</p>
+
+<p>​   如下图所示，下图为某种行业效益值y与程视人口数量x的训练集</p>
+
+<p><img src="../imgs/ex1_1.png" alt="ex1_1" /></p>
+
+<p>​   根据图像特征，我们可以得出这些数据可以用下图函数来代表：</p>
+
+<p>​             <img src="/ex1_2.png" alt="ex1_2" /></p>
+
+<p>​   因此我们可以得出一个假设函数：</p>
+
+<p>​<br />
+$$
+h<em>{\theta}=\theta</em>{0}+\theta_{1}X
+$$
+​</p>
+
+<h3 id="代价函数">代价函数</h3>
+
+<p>​   在作出假设函数之后，我们要对建设函数中的两个未知量$$\theta<em>{0}$$和$$\theta</em>{1}$$做出选择，即选择不同的$$\theta<em>{0}$$$$\theta</em>{1}$$，验证所选择的值是否能时假设函数最大程度的能跟数值相符合</p>
+
+<p>​   对于如何判断所选择的$$\theta<em>{0}$$和$$\theta</em>{1}$$时最好的，我们选择均方误差来作为衡量标准，即：
+$$
+J(\theta)=\tfrac{1}{2m}\sum<em>{i=0}^{m}(h</em>{\theta}(x^{i})-y^{i})^{2}
+$$
+​   此即为我们的代价函数，函数值绝对值越小表示$$\theta<em>{0}$$和$$\theta</em>{1}$$越符合目标值</p>
+
+<h2 id="梯度下降算法">梯度下降算法</h2>
+
+<h3 id="前言">前言</h3>
+
+<p>​   在求代价函数的最小值时，以二维图像来为例表示函数值变化规律来讲，假设函数值变化规律如下图所示</p>
+
+<p><img src="/ex1_3.png" alt="ex1_3" /></p>
+
+<p>​   1处为最小值点，我们发现如果根据函数特征看，当$$\Delta x$$与$$y&rsquo;$$符号相反时，沿着这个方向可以从任何点到达最小值处，因此在学习过程中可以根据导数（当为多元函数时为梯度）来判断如何改变变量值，来是的求解过程更加快速。</p>
+
+<h3 id="梯度定义">梯度定义</h3>
+
+<p>​   梯度表示某一函数在该处的方向导数沿着该方向取得最大值，即函数在该点处沿着该方向变化最快，变化率最大</p>
+
+<h3 id="多元函数梯度表达式">多元函数梯度表达式</h3>
+
+<p>$$
+\bigtriangledown f = (\frac{\partial f}{\partial x<em>{i}})  其中(\bigtriangledown f)</em>{i}=\frac{\partial f}{\partial x_{i}}
+$$</p>
+
+<h3 id="根据梯度下降法则选择-theta">根据梯度下降法则选择$$ \theta$$</h3>
+
+<p>​   在选取变量$$\theta$$值时，根据梯度下降法则应该按照以下规则选取$$\theta$$的值</p>
+
+<p>​<br />
+$$
+\theta = \theta - \alpha \bigtriangleup f
+$$
+​   其中$$\alpha$$为学习率，自己选取,因为梯度的方向是函数f增长最快的方向，梯度的反方向是f降低最快的方向，所以选取梯度的负数方向。</p>
+
+<h3 id="梯度下降算法求解过程">梯度下降算法求解过程</h3>
+
+<p>​   1.初始化参数为任意值。</p>
+
+<p>​   2.求解梯度$$\bigtriangleup f$$</p>
+
+<p>​   3.更新参数$$\theta = \theta - \alpha \bigtriangleup f$$</p>
+
+<p>​   4.若达到指定迭代次数或者收敛条件，训练结束</p>
+
+<p>​     若没有，则重复执行步骤2-步骤4</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://okery.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://okery.github.io/js/main.js"></script>
+<script src="https://okery.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
