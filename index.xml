@@ -126,5 +126,14 @@ J = sum(((X * theta) - y) .^ 2)/(2*m);  笔记：.</description>
 python代码实现链接： 代码</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://okery.github.io/post/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://okery.github.io/post/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95/</guid>
+      <description>欧几里得算法欧几里得算法用来计算两个整数的最大公约数#### 公式​	gcd(a, b) = gcd(b, a mod b)#### 原理​	两个整数的最大公约数等于其中较小的那个数和两数相除的最大公约数#### 实现​	递归实现```pythondef gcd_recursion(a, b):if b == 0:return areturn gcd_re(b, a % b)print(gcd_re(6, 4))```​	非递归实现```pythondef gcd_no_recursion(a, b):while b != 0:tmp = a % ba = bb = tmpreturn a```</description>
+    </item>
+    
   </channel>
 </rss>

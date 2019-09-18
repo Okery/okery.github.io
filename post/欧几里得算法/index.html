@@ -1,0 +1,44 @@
+<center><h1>欧几里得算法</h1></center>
+
+欧几里得算法用来计算两个整数的最大公约数
+
+#### 公式
+
+​	gcd(a, b) = gcd(b, a mod b)
+
+#### 原理
+
+​	两个整数的最大公约数等于其中较小的那个数和两数相除的最大公约数
+
+#### 实现
+
+​	递归实现
+
+```python
+def gcd_recursion(a, b):
+
+    if b == 0:
+        return a
+
+    return gcd_re(b, a % b)
+
+
+print(gcd_re(6, 4))
+```
+
+​	非递归实现
+
+```python
+def gcd_no_recursion(a, b):
+
+    while b != 0:
+
+        tmp = a % b
+
+        a = b
+
+        b = tmp
+
+    return a
+```
+
