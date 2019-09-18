@@ -1,59 +1,153 @@
-<center> <h1>机器学习第一章</h1> </center>
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.57.2" />
+		<title>机器学习第一章笔记 &middot; LiuHe&#39;s blog</title>
+		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
+		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
 
-### 模型选择的原则
+		
+		<link rel="stylesheet" href="https://okery.github.io/css/monosocialiconsfont.css">
+		
 
-#### 误差
+		
 
-​	是模型的预测输出值与其真实值之间的差异
+		
+	</head>
 
-#### 训练
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://okery.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://okery.github.io/posts'>Archive</a>
+	<a href='https://okery.github.io/tags'>Tags</a>
+	<a href='https://okery.github.io/about'>About</a>
 
-​	通过已知的样本数据进行学习，从而得到模型的过程
+	
 
-#### 训练误差
-
-​	模型作用与训练集时的误差
-
-#### 泛化
-
-​	有具体的、个别的扩大为一般的，即从特殊到一半，成为泛化。对机器学习的模型来讲，泛化是指模型作用于新的样本数据（非训练集）
-
-#### 泛化误差
-
-​	模型作用于新的样本数据时的误差
-
-#### 模型容量
-
-​	是指拟合各种模型的能力
-
-#### 过拟合和欠拟合
-
-​	是某个模型在训练集上表现很好，但是在新样本上表现差。模型将训练集的特征学习的太好，导致一些非普遍规律被模型接纳和体现，从而在训练集上表现好，但是对于新样本表现差。反之则成为欠拟合，即模型对训练集的一边性质学习较差，模型作用于训练集时表现不好
-
-#### 模型选择
-
-​	针对某个具体的任务，通常会有多种模型可供选择，对同一个模型也会有多组参数，可以通过分析、评估模型的泛化误差，选择泛化误差最小的模型
+	
+</nav>
 
 
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        机器学习第一章笔记
+                    </h1>
+                    <h2 class="headline">
+                    Sep 18, 2019 14:43
+                    · 44 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
 
-### 模型的评估方法
+<p><center> <h1>机器学习第一章</h1> </center></p>
 
-#### 评估思路
+<h3 id="模型选择的原则">模型选择的原则</h3>
 
-​	通过实验测试，对模型的泛化误差进行评估，选出泛化误差最小的模型。待测数据集全集未知，使用测试集进项泛化测试，测试误差即为泛化误差的近似
+<h4 id="误差">误差</h4>
 
-​	测试集和训练集尽可能互斥
+<p>​   是模型的预测输出值与其真实值之间的差异</p>
 
-​	测试集和训练集独立同分布
+<h4 id="训练">训练</h4>
 
-#### 留出法
+<p>​   通过已知的样本数据进行学习，从而得到模型的过程</p>
 
-​	将已知数据集的划分极可能保持数据分布一致性，避免因数据划分过程引入为的偏差
+<h4 id="训练误差">训练误差</h4>
 
-​	数据分割存在多种形式会导致不同的训练集、测试集划分，单次留出法结果往往存在偶然性，其稳定性较差，通常会进行若干次随机划分、重复实验评估取平均值作为评估结果
+<p>​   模型作用与训练集时的误差</p>
 
-​	数据集拆成两部分，每部分的规模设置会影响评估结果，测试、训练的比例通常为7：3
+<h4 id="泛化">泛化</h4>
 
-#### 交叉验证法
+<p>​   有具体的、个别的扩大为一般的，即从特殊到一半，成为泛化。对机器学习的模型来讲，泛化是指模型作用于新的样本数据（非训练集）</p>
 
-​	将数据集划分k个大小相似的互斥的数据子集，子集数据尽可能保证数据分布的一致性（分层采样），每次从中选取一个数据集作为测试集，其余用作训练集，可以进行k次训练和测试，得到评估均值。该验证方法也称作k折交叉验证。使用不同的划分，重复p次，称作p次k折交叉验证
+<h4 id="泛化误差">泛化误差</h4>
+
+<p>​   模型作用于新的样本数据时的误差</p>
+
+<h4 id="模型容量">模型容量</h4>
+
+<p>​   是指拟合各种模型的能力</p>
+
+<h4 id="过拟合和欠拟合">过拟合和欠拟合</h4>
+
+<p>​   是某个模型在训练集上表现很好，但是在新样本上表现差。模型将训练集的特征学习的太好，导致一些非普遍规律被模型接纳和体现，从而在训练集上表现好，但是对于新样本表现差。反之则成为欠拟合，即模型对训练集的一边性质学习较差，模型作用于训练集时表现不好</p>
+
+<h4 id="模型选择">模型选择</h4>
+
+<p>​   针对某个具体的任务，通常会有多种模型可供选择，对同一个模型也会有多组参数，可以通过分析、评估模型的泛化误差，选择泛化误差最小的模型</p>
+
+<h3 id="模型的评估方法">模型的评估方法</h3>
+
+<h4 id="评估思路">评估思路</h4>
+
+<p>​   通过实验测试，对模型的泛化误差进行评估，选出泛化误差最小的模型。待测数据集全集未知，使用测试集进项泛化测试，测试误差即为泛化误差的近似</p>
+
+<p>​   测试集和训练集尽可能互斥</p>
+
+<p>​   测试集和训练集独立同分布</p>
+
+<h4 id="留出法">留出法</h4>
+
+<p>​   将已知数据集的划分极可能保持数据分布一致性，避免因数据划分过程引入为的偏差</p>
+
+<p>​   数据分割存在多种形式会导致不同的训练集、测试集划分，单次留出法结果往往存在偶然性，其稳定性较差，通常会进行若干次随机划分、重复实验评估取平均值作为评估结果</p>
+
+<p>​   数据集拆成两部分，每部分的规模设置会影响评估结果，测试、训练的比例通常为7：3</p>
+
+<h4 id="交叉验证法">交叉验证法</h4>
+
+<p>​   将数据集划分k个大小相似的互斥的数据子集，子集数据尽可能保证数据分布的一致性（分层采样），每次从中选取一个数据集作为测试集，其余用作训练集，可以进行k次训练和测试，得到评估均值。该验证方法也称作k折交叉验证。使用不同的划分，重复p次，称作p次k折交叉验证</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://okery.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://okery.github.io/js/main.js"></script>
+<script src="https://okery.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
