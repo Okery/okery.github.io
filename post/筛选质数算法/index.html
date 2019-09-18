@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.57.2" />
+		<title>筛选质数算法 &middot; LiuHe&#39;s blog</title>
+		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
+		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://okery.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://okery.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://okery.github.io/posts'>Archive</a>
+	<a href='https://okery.github.io/tags'>Tags</a>
+	<a href='https://okery.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        筛选质数算法
+                    </h1>
+                    <h2 class="headline">
+                    Sep 18, 2019 20:23
+                    · 130 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p><center><h1>筛选算法——筛选指定范围内的质数</h1></center></p>
+
+<h3 id="案例">案例</h3>
+
+<p>指定范围为：1-20</p>
+
+<p>数组为：</p>
+
+<p>​   1   2   3   4   5</p>
+
+<p>​   6   7   8   9   10</p>
+
+<p>​   11  12  13  14  15</p>
+
+<p>​   16  17  18  19  20</p>
+
+<p>​   21  22  23  24  25</p>
+
+<p>1.去掉2的倍数</p>
+
+<p>2.去掉3的倍数</p>
+
+<p>3.去掉4的倍数</p>
+
+<p>4.去掉5的倍数</p>
+
+<p>去掉方法为：</p>
+
+<p>​   j = i * i</p>
+
+<p>​   j = j + i</p>
+
+<p>​   i二次幂肯定为i的倍数，所以不为质数，去掉</p>
+
+<p>​   从i * i 处开始，以i为步长往后对应的数肯定为i的倍数，所以不为质数，去掉</p>
+
+<p>​   本案例范围为1-25，所以最高去掉5的倍数即可</p>
+
+<h3 id="算法实现">算法实现</h3>
+
+<pre><code class="language-python"># 筛选算法
+# 筛选给定范围内的质数
+# 给定范围，将数据存放进数组，将非质数所在位置设为0，返回数组
+
+
+def find_prime_number(a):
+
+    numbers = []
+
+    # 初始化数组，将数据填充进数组
+    for i in range(1, a+1):
+        numbers.append(i)
+
+    # 1为非质数
+    numbers[0] = 0
+
+    i_max = int(a ** 0.5)
+
+    # 从第二位起将非质数筛选掉
+    for i in range(2, i_max):
+        j = i*i
+        while j &lt; a:
+            numbers[j-1] = 0
+            j = j + i
+
+    # 返回数组
+    return numbers
+
+
+# 输出
+numbers = find_prime_number(25)
+for i in numbers:
+    if i != 0:
+        print(i)
+</code></pre>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://okery.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://okery.github.io/js/main.js"></script>
+<script src="https://okery.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
