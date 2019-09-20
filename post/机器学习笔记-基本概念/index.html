@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.57.2" />
+		<title>机器学习笔记-基本概念（三） &middot; LiuHe&#39;s blog</title>
+		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
+		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://okery.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://okery.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://okery.github.io/posts'>Archive</a>
+	<a href='https://okery.github.io/tags'>Tags</a>
+	<a href='https://okery.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        机器学习笔记-基本概念（三）
+                    </h1>
+                    <h2 class="headline">
+                    Sep 19, 2019 19:43
+                    · 50 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p><center><h1>机器学习</h1></center></p>
+
+<h3 id="线性回归分析">线性回归分析</h3>
+
+<h4 id="回归">回归</h4>
+
+<p>​   回归是处理两个或两个以上变量之间互相依赖的定量关系的一种统计方法和技术，变量之间的关系并非确定的函数关系，通过一定的概率分布来描述</p>
+
+<h4 id="线性">线性</h4>
+
+<p>​   线性的严格定义是一种映射关系，其映射关系满足可加性和其次性。通俗理解就是两个变量之间存在一次方函数关系，在平面坐标系中表现为一条直线。不满足线性即为非线性。</p>
+
+<h4 id="线性回归">线性回归</h4>
+
+<p>​   线性回归：在回归分析中，如果自变量和因变量之间存在着线性关系，则被称为线性回归。如果只有一个因变量一个自变量，则称为一元线性回归，如果有一个因变量多个自变量，则被称作多元回归。</p>
+
+<h4 id="回归模型">回归模型</h4>
+
+<p>​   回归模型的一般形式是：</p>
+
+<p>​   $$y=f(x<em>{1},x</em>{2},x<em>{3},&hellip;.,x</em>{p})+\varepsilon$$</p>
+
+<p>​   f()函数为确定性关系，后者为随机误差</p>
+
+<h3 id="建立回归模型">建立回归模型</h3>
+
+<h4 id="流程">流程</h4>
+
+<p>​   1.需求分析明确变量：了解相关需求，明确场景，清楚需要解释的指标（因变量），并根据相关业务知识选取与之有关的变量作为解释变量（自变量）</p>
+
+<p>​   2.数据收集加工：根据上一步分析得出的解释变量，去收集相关的数据（时序数据、截面数据等），对得到的数据进行清洗、加工，并根据数据情况调整解释变量，并判断是否满足基本假设。</p>
+
+<p>​   3.确定回归模型： 了解数据集，使用绘图工具绘制变量样本散点图或使用其他分析工具分析变量间的关系，根据结果选择回归模型，如：线性回归模型、指数形式的回归模型等。</p>
+
+<p>​   4.模型参数估计：模型确定后，基于收集、整理的样本数据，估计模型中的相关参数。最常用的方法是最小二乘法，在不满足基本假设的情况下还会采取岭回归、主成分回归、偏最小二乘法等</p>
+
+<p>​   最小二乘法：也叫做最小平方法，通过最小化误差的平方和寻找数据的最佳函数匹配的方法</p>
+
+<p>​   5.模型检验优化：参数确定后，得到模型。此时需要对模型进行统计意义上的检验，包括对回归方程的显著性检验、回归系数的显著性检验、拟合优度检验、异方差检验、多重共线性检验等。还要结合实际场景，判断该模型是否具有意义。</p>
+
+<p>​   6.模型部署应用</p>
+
+<h4 id="回归模型的特点">回归模型的特点</h4>
+
+<p>​   模型简单，建模和应用都比较容易</p>
+
+<p>​   由坚实的统计理论支撑</p>
+
+<p>​   定量分析各变量之间的关系</p>
+
+<p>​   模型预测结果可以通过误差分析精确了解</p>
+
+<p>​   但：</p>
+
+<p>​   假设条件比较多且相对严格</p>
+
+<p>​   变量选择对模型影响较大</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://okery.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://okery.github.io/js/main.js"></script>
+<script src="https://okery.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

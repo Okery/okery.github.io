@@ -6,10 +6,48 @@
     <description>Recent content on LiuHe&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Sep 2019 20:23:58 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Sep 2019 09:23:58 +0800</lastBuildDate>
     
 	<atom:link href="https://okery.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>机器学习笔记-一元线性回归</title>
+      <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</link>
+      <pubDate>Fri, 20 Sep 2019 09:23:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/</guid>
+      <description>一元线性回归</description>
+    </item>
+    
+    <item>
+      <title>机器学习笔记-基本概念（三）</title>
+      <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Thu, 19 Sep 2019 19:43:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description>机器学习
+线性回归分析 回归 ​ 回归是处理两个或两个以上变量之间互相依赖的定量关系的一种统计方法和技术，变量之间的关系并非确定的函数关系，通过一定的概率分布来描述
+线性 ​ 线性的严格定义是一种映射关系，其映射关系满足可加性和其次性。通俗理解就是两个变量之间存在一次方函数关系，在平面坐标系中表现为一条直线。不满足线性即为非线性。
+线性回归 ​ 线性回归：在回归分析中，如果自变量和因变量之间存在着线性关系，则被称为线性回归。如果只有一个因变量一个自变量，则称为一元线性回归，如果有一个因变量多个自变量，则被称作多元回归。
+回归模型 ​ 回归模型的一般形式是：
+​ $$y=f(x{1},x{2},x{3},&amp;hellip;.,x{p})+\varepsilon$$
+​ f()函数为确定性关系，后者为随机误差
+建立回归模型 流程 ​ 1.需求分析明确变量：了解相关需求，明确场景，清楚需要解释的指标（因变量），并根据相关业务知识选取与之有关的变量作为解释变量（自变量）
+​ 2.数据收集加工：根据上一步分析得出的解释变量，去收集相关的数据（时序数据、截面数据等），对得到的数据进行清洗、加工，并根据数据情况调整解释变量，并判断是否满足基本假设。
+​ 3.确定回归模型： 了解数据集，使用绘图工具绘制变量样本散点图或使用其他分析工具分析变量间的关系，根据结果选择回归模型，如：线性回归模型、指数形式的回归模型等。
+​ 4.模型参数估计：模型确定后，基于收集、整理的样本数据，估计模型中的相关参数。最常用的方法是最小二乘法，在不满足基本假设的情况下还会采取岭回归、主成分回归、偏最小二乘法等
+​ 最小二乘法：也叫做最小平方法，通过最小化误差的平方和寻找数据的最佳函数匹配的方法
+​ 5.模型检验优化：参数确定后，得到模型。此时需要对模型进行统计意义上的检验，包括对回归方程的显著性检验、回归系数的显著性检验、拟合优度检验、异方差检验、多重共线性检验等。还要结合实际场景，判断该模型是否具有意义。
+​ 6.模型部署应用
+回归模型的特点 ​ 模型简单，建模和应用都比较容易
+​ 由坚实的统计理论支撑
+​ 定量分析各变量之间的关系
+​ 模型预测结果可以通过误差分析精确了解
+​ 但：
+​ 假设条件比较多且相对严格
+​ 变量选择对模型影响较大</description>
+    </item>
     
     <item>
       <title>筛选质数算法</title>
@@ -39,12 +77,37 @@
     </item>
     
     <item>
-      <title>机器学习第一章笔记</title>
-      <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/</link>
+      <title>机器学习笔记-基本概念（一）</title>
+      <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%80/</link>
       <pubDate>Wed, 18 Sep 2019 14:43:58 +0800</pubDate>
       
-      <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E7%AB%A0/</guid>
-      <description>机器学习第一章 
+      <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%80/</guid>
+      <description>机器学习第零章  
+机器学习流程  输入数据 特征工程 模型训练 模型部署 模型应用  相关基本概念 输入空间 ​ 将输入的可能取值的集合称作输入控件
+输出空间 ​ 将输出的所有可能取值的集合称作输出空间
+特征空间 ​ 特征：即属性。每个输入实例的各个组成部分称作原始特征，基于原始特征还可以扩展出更多的衍生特征
+​ 特征向量：由多个特征组成的集合，称作特征向量
+​ 特征空间：将特征向量存在的空间称作特征空间
+假设空间 ​ 假设空间：由输入空间到输出空间的映射的集合，称作假设空间
+机器学习方法三要素 方法 = 模型 + 策略 + 算法 模型： ​ 输入空间到输出空间的映射关系
+策略： ​ 从假设空间众多的假设中选择到最有的模型的学习标准或规则
+算法： ​ 学习模型的具体的计算方法，通常是求解最优化问题
+模型分类 ​ 预测分类：分类 Classification
+​ 预测取值：回归 Regression
+​ 发现结构：聚类 Clustering
+​ 发现异常数据：异常检测 Anomaly Detection
+损失函数 ​ 用来衡量预测结果和真实结果之间的差距，其值越小，代表预测结果和真实结果越一致
+​ 平方损失函数：预测结果与真实结果差的平方
+​ $$ L(Y,f(x)) = (Y - f(x))^{2} $$</description>
+    </item>
+    
+    <item>
+      <title>机器学习笔记-基本概念（二）</title>
+      <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%BA%8C/</link>
+      <pubDate>Wed, 18 Sep 2019 14:43:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%BA%8C/</guid>
+      <description>机器学习笔记 
 模型选择的原则 误差 ​ 是模型的预测输出值与其真实值之间的差异
 训练 ​ 通过已知的样本数据进行学习，从而得到模型的过程
 训练误差 ​ 模型作用与训练集时的误差
@@ -69,31 +132,6 @@
 ​ 对于已知数据集较小且难以有效划分训练集/测试集的时候，采用自助法
 ​ 对于已知数据集较小且可以有效划分训练集/测试集的时候，采用留一法
 假设检验步骤 1.建立假设 ​ 根据具体的问题，建立假设</description>
-    </item>
-    
-    <item>
-      <title>机器学习第零章笔记</title>
-      <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%AC%E9%9B%B6%E7%AB%A0/</link>
-      <pubDate>Wed, 18 Sep 2019 14:43:58 +0800</pubDate>
-      
-      <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%AC%E9%9B%B6%E7%AB%A0/</guid>
-      <description>机器学习第零章  
-机器学习流程  输入数据 特征工程 模型训练 模型部署 模型应用  相关基本概念 输入空间 ​ 将输入的可能取值的集合称作输入控件
-输出空间 ​ 将输出的所有可能取值的集合称作输出空间
-特征空间 ​ 特征：即属性。每个输入实例的各个组成部分称作原始特征，基于原始特征还可以扩展出更多的衍生特征
-​ 特征向量：由多个特征组成的集合，称作特征向量
-​ 特征空间：将特征向量存在的空间称作特征空间
-假设空间 ​ 假设空间：由输入空间到输出空间的映射的集合，称作假设空间
-机器学习方法三要素 方法 = 模型 + 策略 + 算法 模型： ​ 输入空间到输出空间的映射关系
-策略： ​ 从假设空间众多的假设中选择到最有的模型的学习标准或规则
-算法： ​ 学习模型的具体的计算方法，通常是求解最优化问题
-模型分类 ​ 预测分类：分类 Classification
-​ 预测取值：回归 Regression
-​ 发现结构：聚类 Clustering
-​ 发现异常数据：异常检测 Anomaly Detection
-损失函数 ​ 用来衡量预测结果和真实结果之间的差距，其值越小，代表预测结果和真实结果越一致
-​ 平方损失函数：预测结果与真实结果差的平方
-​ $$ L(Y,f(x)) = (Y - f(x))^{2} $$</description>
     </item>
     
     <item>
