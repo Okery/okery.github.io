@@ -6,10 +6,24 @@
     <description>Recent content on LiuHe&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Sep 2019 19:43:58 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Sep 2019 21:23:58 +0800</lastBuildDate>
     
 	<atom:link href="https://okery.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>假设检验-T检验</title>
+      <link>https://okery.github.io/post/t%E6%A3%80%E9%AA%8C/</link>
+      <pubDate>Fri, 20 Sep 2019 21:23:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/t%E6%A3%80%E9%AA%8C/</guid>
+      <description>假设检验-T检验
+假设检验概念 ​ 假设检验也叫显著性检验，是以小概率反证法的逻辑推理，判断假设是否成立的统计方法，它首先假设样本对应的总体参数（或分布）与某个已知总体参数（或分布）相同，然后根据统计量的分布规律来分析样本数据，利用样本信息判断是否支持这种假设，并对检验假设做出取舍抉择，做出的结论是概率性的，不是觉得的肯定和否定。
+T检验 ​ T检验是用于两个样本平均值差异程度的检验方法。
+​ T检验的适用条件为样本分布符合正态分布
+​
+​</description>
+    </item>
     
     <item>
       <title>机器学习笔记-基本概念（三）</title>
