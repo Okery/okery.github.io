@@ -6,10 +6,27 @@
     <description>Recent content on LiuHe&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Sep 2019 14:23:58 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Sep 2019 15:37:58 +0800</lastBuildDate>
     
 	<atom:link href="https://okery.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>机器学习笔记-逻辑回归</title>
+      <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</link>
+      <pubDate>Mon, 23 Sep 2019 15:37:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</guid>
+      <description>模型原理 分类变量 ​ 又称定性变量、离散型变量，观测的个体智能属于几种互不相容的类别的一种，一般用非数字来表达其类别，这种数据被称为分类变量。与之相对的是连续变量，即定量变量，是由测量、技术或者统计等得到的，这些变量具有数值特征
+#### 常见的分类变量
+​ 有序变量：没有数量关系，但有次序关系。比如：收入等级、客户级别
+​ 名义变量：即无等级关系，也无数量关系。比如：性别、天气等
+因变量为分类变量的特点 ​ 误差项非正态分布：误差分布为两点型离散分布，不是正态分布
+​ 误差项零均值异方差：均值为0，误差的方差依赖于自变量，会随着自变量的不同水平而变化，是异方差
+​ 回归方程限制：y为0-1型随机变量
+改进 ​ 回归方程改用限制在[0,1]之间的连续曲线，而不再是直线回归方程，常用的是Logisitic函数
+​ 因变量取值为0，1，不适合直接作为回归的因变量，改用因变量取1的概率Π作为回归因变量</description>
+    </item>
     
     <item>
       <title>杨辉三角</title>
@@ -225,8 +242,7 @@ J = sum(((X * theta) - y) .^ 2)/(2*m);  笔记：.</description>
       <pubDate>Fri, 16 Aug 2019 14:43:58 +0800</pubDate>
       
       <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%8D%95%E5%8F%98%E9%87%8F%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%BD%9C%E4%B8%9Apython/</guid>
-      <description>机器学习—单变量线性回归作业(python)
-python代码实现链接： 代码</description>
+      <description>机器学习—单变量线性回归作业(python) python代码实现链接： 代码</description>
     </item>
     
     <item>
