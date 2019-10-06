@@ -289,6 +289,15 @@ J = sum(((X * theta) - y) .^ 2)/(2*m);  笔记：.</description>
     </item>
     
     <item>
+      <title>python常用制表符</title>
+      <link>https://okery.github.io/post/python%E5%B8%B8%E7%94%A8%E5%AD%97%E7%AC%A6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://okery.github.io/post/python%E5%B8%B8%E7%94%A8%E5%AD%97%E7%AC%A6/</guid>
+      <description>   转义字符 描述     \&amp;lsquo; 单引号   \&amp;ldquo; 双引号   \ 反斜杠   \b 退格   \000 空额   \n 换行   \v 纵向制表符   \t 横向制表符   \r 回车   \f 换行    </description>
+    </item>
+    
+    <item>
       <title>机器学习笔记-最大似然估计</title>
       <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
