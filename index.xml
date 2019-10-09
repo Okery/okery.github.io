@@ -80,6 +80,25 @@ Arctan函数：$$f(x)=arctan(x)$$
     </item>
     
     <item>
+      <title>机器学习笔记-k近邻算法距离度量</title>
+      <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-k%E8%BF%91%E9%82%BB%E8%B7%9D%E7%A6%BB%E5%BA%A6%E9%87%8F/</link>
+      <pubDate>Tue, 01 Oct 2019 19:23:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-k%E8%BF%91%E9%82%BB%E8%B7%9D%E7%A6%BB%E5%BA%A6%E9%87%8F/</guid>
+      <description>k近邻算法中的距离度量规则 特征空间中两个实例点的距离是两个实例点相似程度的反映。
+设特征空间X是n维实数向量空间$$R^{n},x{i},x{j}\in X,x{i}=(x{i}^{1},x{i}^{2},&amp;hellip;,x{i}^{n})^{T},x{j}=(x{j}^{1},x{j}^{2},&amp;hellip;,x{j}^{n})^{T}$$
+则$$x{i},x{j}的L_{p}距离定义为$$
+$$L{p}(x{i},x{j})=(\sum{l=1}^{n}|x{i}^{(l)}-x{j}^{l}|^{p})^{\frac{1}{p}}$$
+这里p&amp;gt;=1.
+欧式距离 当上述p=2时，称为欧氏距离，即
+$$L{2}(x{i},x{j})=(\sum{l=1}^{n}|x{i}^{(l)}-x{j}^{l}|^{2})^{\frac{1}{2}}$$
+曼哈顿距离 当上述p=1时，称为曼哈顿距离，即
+$$L{1}(x{i},x{j})=(\sum{l=1}^{n}|x{i}^{(l)}-x{j}^{l}|)$$
+距离最大值 当p趋向无穷时，它是各个坐标距离的最大值，即
+$$L{\infty}(x{i},x{j})=max{l}|x{i}^{(l)}-x{j}^{l}|$$</description>
+    </item>
+    
+    <item>
       <title>机器学习笔记-python常用函数</title>
       <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-python%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</link>
       <pubDate>Mon, 30 Sep 2019 19:23:58 +0800</pubDate>
