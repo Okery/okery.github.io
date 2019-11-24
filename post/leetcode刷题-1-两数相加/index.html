@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.57.2" />
+		<title>leetcode刷题-1-两数相加 &middot; LiuHe&#39;s blog</title>
+		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
+		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://okery.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://okery.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://okery.github.io/posts'>Archive</a>
+	<a href='https://okery.github.io/tags'>Tags</a>
+	<a href='https://okery.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        leetcode刷题-1-两数相加
+                    </h1>
+                    <h2 class="headline">
+                    Oct 20, 2019 14:43
+                    · 142 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>立个flag，研二去北京实习，别让女朋友等那么久了</p>
+
+<h3 id="问题描述">问题描述</h3>
+
+<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
+
+<p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
+
+<h3 id="示例">示例</h3>
+
+<p>给定 nums = [2, 7, 11, 15], target = 9</p>
+
+<p>因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]</p>
+
+<h3 id="实现">实现</h3>
+
+<h4 id="1-暴力破解">1 暴力破解</h4>
+
+<p>首先想到的是暴力破解，也能跟后面其他方法对比一下复杂度</p>
+
+<pre><code class="language-python">def two_sum_vio(nums, target):
+    num_len = len(nums)
+    results = []
+    for i in range(0, num_len):
+        flage = False
+        remainder = target - nums[i]
+        for j in range(0, num_len):
+            if(nums[j] == remainder and j != i):
+                results.append(i)
+                results.append(j)
+                flage = True
+                break
+        if flage:
+            break
+	return results`
+</code></pre>
+
+<h4 id="2-hash实现">2 hash实现</h4>
+
+<pre><code class="language-python">def two_sum_hash(nums, target):
+    nums_len = len(nums)
+    num_dict = {}
+    results = []
+    for i in range(0, nums_len):
+        if num_dict.__contains__(nums[i]):
+            num_dict[nums[i]] += i
+        else:
+            num_dict[nums[i]] = i
+    for i in range(0, nums_len):
+        remainder = target - nums[i]
+        if num_dict.__contains__(remainder) and   num_dict[remainder] != i:
+            print(remainder)
+            if remainder == nums[i]:
+                print(&quot;相等&quot;)
+                results.append(i)
+                results.append(num_dict[nums[i]]-i)
+            else:
+                print(i)
+                print(num_dict[remainder])
+                results.append(i)
+                results.append(num_dict[remainder])
+            break
+
+    return results
+</code></pre>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://okery.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://okery.github.io/js/main.js"></script>
+<script src="https://okery.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

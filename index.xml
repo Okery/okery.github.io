@@ -6,10 +6,44 @@
     <description>Recent content on LiuHe&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Oct 2019 10:20:58 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Oct 2019 10:20:58 +0800</lastBuildDate>
     
 	<atom:link href="https://okery.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>深度学习-推荐博文</title>
+      <link>https://okery.github.io/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E6%8E%A8%E8%8D%90%E5%8D%9A%E6%96%87/</link>
+      <pubDate>Mon, 21 Oct 2019 10:20:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E6%8E%A8%E8%8D%90%E5%8D%9A%E6%96%87/</guid>
+      <description>神经网络浅讲：从神经元到深度学习
+https://www.cnblogs.com/subconscious/p/5058741.html</description>
+    </item>
+    
+    <item>
+      <title>leetcode刷题-1-两数相加</title>
+      <link>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-1-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</link>
+      <pubDate>Sun, 20 Oct 2019 14:43:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-1-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</guid>
+      <description>立个flag，研二去北京实习，别让女朋友等那么久了
+问题描述 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
+示例 给定 nums = [2, 7, 11, 15], target = 9
+因为 nums[0] + nums[1] = 2 + 7 = 9 所以返回 [0, 1]
+实现 1 暴力破解 首先想到的是暴力破解，也能跟后面其他方法对比一下复杂度
+def two_sum_vio(nums, target): num_len = len(nums) results = [] for i in range(0, num_len): flage = False remainder = target - nums[i] for j in range(0, num_len): if(nums[j] == remainder and j !</description>
+    </item>
+    
+    <item>
+      <title>机器学习笔记-朴素贝叶斯</title>
+      <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/</link>
+      <pubDate>Fri, 11 Oct 2019 15:37:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>神经网络笔记-神经网络基础</title>
