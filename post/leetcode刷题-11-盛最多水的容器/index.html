@@ -46,7 +46,7 @@
                     </h1>
                     <h2 class="headline">
                     Oct 22, 2019 14:43
-                    · 80 words
+                    · 147 words
                     · 1 minute read
                       <span class="tags">
                       
@@ -91,9 +91,33 @@
 	return max_area`
 </code></pre>
 
-<h4 id="2-hash实现">2 hash实现</h4>
+<h4 id="2-双指针法-头尾指针">2 双指针法 头尾指针</h4>
 
-<p>hash以空间换时间，使用python字典类型存储</p>
+<p>头尾指针，双向移动，每次移动较小值，时间复杂度$$O(n)$$</p>
+
+<pre><code class="language-python">def max_area_hash(height_list):
+    list_length = len(height_list)
+    rear_pointer = list_length - 1
+    head_pointer = 0
+
+    max_area = 0
+
+    while(rear_pointer != head_pointer):
+        if height_list[rear_pointer] &gt;= height_list[head_pointer]:
+            current_width = rear_pointer - head_pointer
+            current_area = height_list[head_pointer] * current_width
+            if max_area &lt; current_area:
+                max_area = current_area
+            head_pointer += 1
+        else:
+            current_width = rear_pointer - head_pointer
+            current_area = height_list[rear_pointer] * current_width
+            if max_area &lt; current_area:
+                max_area = current_area
+            rear_pointer -= 1
+
+    return max_area'
+</code></pre>
 
                 </section>
             </article>

@@ -21,7 +21,7 @@
 说明：你不能倾斜容器，且 n 的值至少为 2。
 示例 输入: [1,8,6,2,5,4,8,3,7] 输出: 49  实现 #### 1 暴力破解
 暴力破解，时间复杂度$$O(n^{2})$$,超出官方指定时间限制，自己跑了一下大约是两秒半
-def max_area(height_list): height_num = len(height_list) max_area = 0 for i in range(height_num): current_val = height_list[i] for j in range(i+1, height_num): if current_val &amp;lt;= height_list[j]: area = current_val * (j-i) else: area = height_list[j] * (j-i) if max_area &amp;lt; area: max_area = area return max_area`  2 hash实现 hash以空间换时间，使用python字典类型存储</description>
+def max_area(height_list): height_num = len(height_list) max_area = 0 for i in range(height_num): current_val = height_list[i] for j in range(i+1, height_num): if current_val &amp;lt;= height_list[j]: area = current_val * (j-i) else: area = height_list[j] * (j-i) if max_area &amp;lt; area: max_area = area return max_area`  2 双指针法 头尾指针 头尾指针，双向移动，每次移动较小值，时间复杂度$$O(n)$$</description>
     </item>
     
     <item>
