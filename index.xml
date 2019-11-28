@@ -25,6 +25,19 @@ def max_area(height_list): height_num = len(height_list) max_area = 0 for i in r
     </item>
     
     <item>
+      <title>leetcode刷题-16-最接近的三数之和</title>
+      <link>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-16-%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/</link>
+      <pubDate>Tue, 22 Oct 2019 14:43:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-16-%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/</guid>
+      <description>问题描述 给定一个包括 n 个整数的数组 nums 和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案。
+示例 给定数组 nums = [-1，2，1，-4], 和 target = 1.
+与 target 最接近的三个数的和为 2. (-1 + 2 + 1 = 2).
+实现 双指针两侧扩展 双指针从目标值开始，同时向两侧扩展，取最先遇到的三个数相加
+def three_sum_clostest(nums, target): &amp;quot;&amp;quot;&amp;quot; 给定一个包括n个整数的数组nums和一个目标值target。 找出nums中的三个整数,使得它们的和与target最接近。返回这三个数的和。 假定每组输入只存在唯一答案。 &amp;quot;&amp;quot;&amp;quot; result_sum = 0 pre_distance = {} if target&amp;lt;0: max_width = len(nums) - target else: max_width = len(nums) + target current_nums_num = 0 break_flag = False for x in nums: # print(x) current_dis = (target - x) if current_dis &amp;lt; 0: current_dis = - current_dis if pre_distance.</description>
+    </item>
+    
+    <item>
       <title>深度学习-推荐博文</title>
       <link>https://okery.github.io/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E6%8E%A8%E8%8D%90%E5%8D%9A%E6%96%87/</link>
       <pubDate>Mon, 21 Oct 2019 10:20:58 +0800</pubDate>
@@ -55,7 +68,18 @@ def two_sum_vio(nums, target): num_len = len(nums) results = [] for i in range(0
       <pubDate>Fri, 11 Oct 2019 15:37:58 +0800</pubDate>
       
       <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/</guid>
-      <description></description>
+      <description>分类问题 定义 从数学角度来看，分类问题可做如下定义：
+集合:$$C= \left{ y{1},y{2},&amp;hellip;y{n} \right}, I= \left{ x{1}, x{2}, &amp;hellip;,x{m},&amp;hellip; \right}$$
+确定映射规则：y=f(x)
+对于任意x属于I，有且仅有一个y属于C，使得y=f(x)成立
+其中：C为类别集合， I为项集合， f为分类器
+分类算法的任务就是构造分类器f
+补充 分类型问题往往采用经验性方法构造映射规则，即一般情况下的分类问题缺少足够的信息来构造100%正确的映射规则。
+贝叶斯定理 贝叶斯定理解决了一个问题 已知某条件概率，如何得到两个事件交换后的概率，也就是在已知P(A|B)情况下，如何求得P(B|A)
+条件概率 $$P(A|B)=\frac{P(AB)}{P(B)}$$
+贝叶斯定理公式 $$P(B|A)=\frac{P(A|B)P(B)}{P(A)}$$
+朴素贝叶斯 原理 对于给出的待分类项，求解在此出现的条件下各个类别出现的概率，那个最大，就认为此待分类项属于哪个类别
+正式定义  $$设x=\left{a{1}, a{2}, &amp;hellip;, a{m}\right}为一个待分类项，a{i}为x的一个属性$$ $$有类别集合：c=\left{y{1}, y{2}, &amp;hellip;, y_{n}\right}$$ $$计算p(y{1}|x), p(y{2}|x), &amp;hellip;, p(y_{n}|x)$$ $$若p(y{k}|x)=max \left{ p(y{1}|x), p(y{2}) \right}，那么x\in y{k}$$  案例代码 # coding=utf8 &amp;quot;&amp;quot;&amp;quot; @File : bayesain_action.py @Contact : 13132515202@163.com @Modify Time @Author @Version @Description ------------ ------- -------- ----------- 2019/10/11 20:56 LiuHe 1.</description>
     </item>
     
     <item>
