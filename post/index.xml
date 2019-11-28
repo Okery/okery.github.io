@@ -38,6 +38,20 @@ def three_sum_clostest(nums, target): &amp;quot;&amp;quot;&amp;quot; 给定一�
     </item>
     
     <item>
+      <title>leetcode刷题-26-删除有序数组重复项</title>
+      <link>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-26-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E9%87%8D%E5%A4%8D%E9%A1%B9/</link>
+      <pubDate>Tue, 22 Oct 2019 14:43:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-26-%E5%88%A0%E9%99%A4%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E9%87%8D%E5%A4%8D%E9%A1%B9/</guid>
+      <description>问题描述 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
+不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成
+示例 给定数组 nums = [1,1,2],
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。
+你不需要考虑数组中超出新长度后面的元素。
+实现 def remove_duplicates(nums): &amp;quot;&amp;quot;&amp;quot; 不能使用额外数组 双指针移动 &amp;quot;&amp;quot;&amp;quot; reslut_len = len(nums) move_pointer = 0 check_pointer = 1 while (check_pointer != reslut_len and reslut_len != 0): if(nums[check_pointer] == nums[move_pointer]): del(nums[check_pointer]) reslut_len -= 1 else: move_pointer += 1 check_pointer += 1 return reslut_len nums = [1, 1, 2] result = remove_duplicates(nums) print(result)  总结 需要注意边界条件，输入数组可能为空值，在循环遍历时要注意数组为空的情况和索引的设置</description>
+    </item>
+    
+    <item>
       <title>深度学习-推荐博文</title>
       <link>https://okery.github.io/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E6%8E%A8%E8%8D%90%E5%8D%9A%E6%96%87/</link>
       <pubDate>Mon, 21 Oct 2019 10:20:58 +0800</pubDate>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.57.2" />
+		<title>leetcode刷题-26-删除有序数组重复项 &middot; LiuHe&#39;s blog</title>
+		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
+		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://okery.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://okery.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://okery.github.io/posts'>Archive</a>
+	<a href='https://okery.github.io/tags'>Tags</a>
+	<a href='https://okery.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        leetcode刷题-26-删除有序数组重复项
+                    </h1>
+                    <h2 class="headline">
+                    Oct 22, 2019 14:43
+                    · 69 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<h3 id="问题描述">问题描述</h3>
+
+<p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p>
+
+<p>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成</p>
+
+<h3 id="示例">示例</h3>
+
+<p>给定数组 nums = [1,1,2],</p>
+
+<p>函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。</p>
+
+<p>你不需要考虑数组中超出新长度后面的元素。</p>
+
+<h4 id="实现">实现</h4>
+
+<pre><code class="language-python">def remove_duplicates(nums):
+    &quot;&quot;&quot;
+    不能使用额外数组
+    双指针移动
+    &quot;&quot;&quot;
+    reslut_len = len(nums)
+    move_pointer = 0
+    check_pointer = 1
+
+    while (check_pointer != reslut_len and reslut_len != 0):
+        if(nums[check_pointer] == nums[move_pointer]):
+            del(nums[check_pointer])
+            reslut_len -= 1
+        else:
+            move_pointer += 1
+            check_pointer += 1
+
+    return reslut_len
+
+
+nums = [1, 1, 2]
+result = remove_duplicates(nums)
+print(result)
+</code></pre>
+
+<h3 id="总结">总结</h3>
+
+<p>需要注意边界条件，输入数组可能为空值，在循环遍历时要注意数组为空的情况和索引的设置</p>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://okery.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://okery.github.io/js/main.js"></script>
+<script src="https://okery.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
