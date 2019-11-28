@@ -8,7 +8,7 @@
 		
 		
 		<meta name="generator" content="Hugo 0.57.2" />
-		<title>leetcode刷题-26-删除有序数组重复项 &middot; LiuHe&#39;s blog</title>
+		<title>leetcode刷题-27-移除元素 &middot; LiuHe&#39;s blog</title>
 		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
 		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
@@ -42,11 +42,11 @@
             <article>
                 <header>
                     <h1>
-                        leetcode刷题-26-删除有序数组重复项
+                        leetcode刷题-27-移除元素
                     </h1>
                     <h2 class="headline">
                     Oct 22, 2019 14:43
-                    · 71 words
+                    · 69 words
                     · 1 minute read
                       <span class="tags">
                       
@@ -59,52 +59,49 @@
 
 <h3 id="问题描述">问题描述</h3>
 
-<p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p>
+<p>给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。</p>
 
-<p>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成</p>
+<p>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。</p>
+
+<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
 
 <h3 id="示例">示例</h3>
 
-<p>给定数组 nums = [1,1,2],</p>
+<p>给定 nums = [3,2,2,3], val = 3,</p>
 
-<p>函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。</p>
+<p>函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。</p>
 
 <p>你不需要考虑数组中超出新长度后面的元素。</p>
 
 <h3 id="实现">实现</h3>
 
-<h4 id="双指针移动">双指针移动</h4>
+<p>单指针移动，当前值不等于目标值，指针向后移动一位，当前值等于目标值，指针不动，删掉当前元素，数组长度减一</p>
 
-<p>设置主指针move_pointer和检查指针check_pointer,check_pointer永远在move_pointer后一位，若两个位置元素相等，则删掉数组move_pointer指向元素，数组长度减一，指针不动，继续判断，若两个位置元素不相等，则两指针同时往后移动一位，直至check_pointer移动到数组最后一位为止</p>
+<pre><code class="language-python">def remove_element(nums, val):
 
-<pre><code class="language-python">def remove_duplicates(nums):
-    &quot;&quot;&quot;
-    不能使用额外数组
-    双指针移动
-    &quot;&quot;&quot;
-    reslut_len = len(nums)
-    move_pointer = 0
-    check_pointer = 1
+    nums_len = len(nums)
+    index = 0
 
-    while (check_pointer != reslut_len and reslut_len != 0):
-        if(nums[check_pointer] == nums[move_pointer]):
-            del(nums[check_pointer])
-            reslut_len -= 1
+    while(index != nums_len):
+        if(nums[index] == val):
+            del(nums[index])
+            nums_len -= 1
         else:
-            move_pointer += 1
-            check_pointer += 1
+            index += 1
 
-    return reslut_len
+    return nums_len
 
 
-nums = [1, 1, 2]
-result = remove_duplicates(nums)
+nums = [3, 2, 2, 3]
+val = 3
+
+result = remove_element(nums, val)
 print(result)
 </code></pre>
 
 <h3 id="总结">总结</h3>
 
-<p>需要注意边界条件，输入数组可能为空值，在循环遍历时要注意数组为空的情况和索引的设置</p>
+<p>使用while循环往往比for循环要好一些，边界值判断、索引值设定更加简单</p>
 
                 </section>
             </article>

@@ -48,7 +48,24 @@ def three_sum_clostest(nums, target): &amp;quot;&amp;quot;&amp;quot; 给定一�
 示例 给定数组 nums = [1,1,2],
 函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。
 你不需要考虑数组中超出新长度后面的元素。
-实现 def remove_duplicates(nums): &amp;quot;&amp;quot;&amp;quot; 不能使用额外数组 双指针移动 &amp;quot;&amp;quot;&amp;quot; reslut_len = len(nums) move_pointer = 0 check_pointer = 1 while (check_pointer != reslut_len and reslut_len != 0): if(nums[check_pointer] == nums[move_pointer]): del(nums[check_pointer]) reslut_len -= 1 else: move_pointer += 1 check_pointer += 1 return reslut_len nums = [1, 1, 2] result = remove_duplicates(nums) print(result)  总结 需要注意边界条件，输入数组可能为空值，在循环遍历时要注意数组为空的情况和索引的设置</description>
+实现 双指针移动 设置主指针move_pointer和检查指针check_pointer,check_pointer永远在move_pointer后一位，若两个位置元素相等，则删掉数组move_pointer指向元素，数组长度减一，指针不动，继续判断，若两个位置元素不相等，则两指针同时往后移动一位，直至check_pointer移动到数组最后一位为止
+def remove_duplicates(nums): &amp;quot;&amp;quot;&amp;quot; 不能使用额外数组 双指针移动 &amp;quot;&amp;quot;&amp;quot; reslut_len = len(nums) move_pointer = 0 check_pointer = 1 while (check_pointer != reslut_len and reslut_len != 0): if(nums[check_pointer] == nums[move_pointer]): del(nums[check_pointer]) reslut_len -= 1 else: move_pointer += 1 check_pointer += 1 return reslut_len nums = [1, 1, 2] result = remove_duplicates(nums) print(result)  总结 需要注意边界条件，输入数组可能为空值，在循环遍历时要注意数组为空的情况和索引的设置</description>
+    </item>
+    
+    <item>
+      <title>leetcode刷题-27-移除元素</title>
+      <link>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-27-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Tue, 22 Oct 2019 14:43:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-27-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/</guid>
+      <description>问题描述 给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。
+不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。
+元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。
+示例 给定 nums = [3,2,2,3], val = 3,
+函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。
+你不需要考虑数组中超出新长度后面的元素。
+实现 单指针移动，当前值不等于目标值，指针向后移动一位，当前值等于目标值，指针不动，删掉当前元素，数组长度减一
+def remove_element(nums, val): nums_len = len(nums) index = 0 while(index != nums_len): if(nums[index] == val): del(nums[index]) nums_len -= 1 else: index += 1 return nums_len nums = [3, 2, 2, 3] val = 3 result = remove_element(nums, val) print(result)  总结 使用while循环往往比for循环要好一些，边界值判断、索引值设定更加简单</description>
     </item>
     
     <item>
@@ -68,12 +85,12 @@ https://www.cnblogs.com/subconscious/p/5058741.html</description>
       
       <guid>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-1-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</guid>
       <description>立个flag，研二去北京实习，别让女朋友等那么久了
-问题描述 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+问题描述 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
 示例 给定 nums = [2, 7, 11, 15], target = 9
 因为 nums[0] + nums[1] = 2 + 7 = 9 所以返回 [0, 1]
 实现 1 暴力破解 首先想到的是暴力破解，也能跟后面其他方法对比一下复杂度
-def two_sum_vio(nums, target): num_len = len(nums) results = [] for i in range(0, num_len): flage = False remainder = target - nums[i] for j in range(0, num_len): if(nums[j] == remainder and j !</description>
+def two_sum_vio(nums, target): num_len = len(nums) results = [] for i in range(0, num_len): flage = False remainder = target - nums[i] for j in range(0, num_len): if(nums[j] == remainder and j != i): results.</description>
     </item>
     
     <item>
