@@ -8,7 +8,7 @@
 		
 		
 		<meta name="generator" content="Hugo 0.57.2" />
-		<title>杨辉三角 &middot; LiuHe&#39;s blog</title>
+		<title>python学习笔记-小数取整 &middot; LiuHe&#39;s blog</title>
 		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
 		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
@@ -42,13 +42,19 @@
             <article>
                 <header>
                     <h1>
-                        杨辉三角
+                        python学习笔记-小数取整
                     </h1>
                     <h2 class="headline">
-                    Sep 21, 2019 14:23
-                    · 90 words
+                    Sep 30, 2019 19:23
+                    · 9 words
                     · 1 minute read
                       <span class="tags">
+                      
+                      
+                          
+                              <a href="https://okery.github.io/tags/python">python</a>
+                          
+                      
                       
                       </span>
                     </h2>
@@ -57,41 +63,23 @@
                 <section id="post-body">
                     
 
-<p><center><h1>杨辉三角</h1></center></p>
+<h3 id="取整函数">取整函数</h3>
 
-<h3 id="python实现输出指定行数的杨辉三角">python实现输出指定行数的杨辉三角</h3>
+<h4 id="向下取整">向下取整</h4>
 
-<pre><code class="language-python"># -*- coding: utf-8 -*-
-# @Date    : 2019-09-20 14:22:58
-# @Author  : LiuHe (liuh131@163.com)
-# @Link    : https://okery.github.io/
-# @Version : $Id$
-# @Name    : 生成指定行数的杨辉三角
+<p>直接使用内置的int()</p>
 
+<h4 id="四舍五入">四舍五入</h4>
 
-# 生成杨辉三角
-def triangle(row):
-    # 使用二维数组存储内容
-    trianles = []
-    for j in range(row):
-        triangle_inner = []
-        for i in range(j):
-            if i == 0 or i == (j - 1):
-                triangle_inner.append(1)
-            else:
-                tmp = trianles[j - 1][i - 1] + trianles[j - 1][i]
-                triangle_inner.append(tmp)
-        trianles.append(triangle_inner)
-    return trianles
+<p>对数字进行四舍五入使用round()</p>
 
+<h4 id="向上取整">向上取整</h4>
 
-sanjiao = triangle(6)
+<p>使用math模块中的ceil()方法</p>
 
-for items in sanjiao:
-    for i in items:
-        print(i, end='')
-    print('\n')
-</code></pre>
+<h4 id="分别取整数部分和小数部分">分别取整数部分和小数部分</h4>
+
+<p>使用math模块中的modf()方法，该方法返回一个包含小数部分和整数部分的元组</p>
 
                 </section>
             </article>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>深度学习 on LiuHe&#39;s blog</title>
+    <link>https://okery.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 深度学习 on LiuHe&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Oct 2019 10:20:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://okery.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>深度学习-推荐博文</title>
+      <link>https://okery.github.io/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E6%8E%A8%E8%8D%90%E5%8D%9A%E6%96%87/</link>
+      <pubDate>Mon, 21 Oct 2019 10:20:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E6%8E%A8%E8%8D%90%E5%8D%9A%E6%96%87/</guid>
+      <description>神经网络浅讲：从神经元到深度学习
+https://www.cnblogs.com/subconscious/p/5058741.html</description>
+    </item>
+    
+    <item>
+      <title>神经网络笔记-神经网络基础</title>
+      <link>https://okery.github.io/post/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 07 Oct 2019 10:20:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/</guid>
+      <description>### 神经元模型
+神经元是脑组织的基本单位，是神经系统结构与功能的单位。
+M-P模型 M-P模型通过对生物神经元信息处理过程进行了简化和概括
+ 多个输入单个输出 不同输入权重不同 多输入累加整合 阈值特征  模型是把神经元是为二值开关元件，按照不同方式组合来完成各种逻辑运算。能够构成逻辑与、非、或，理论上可以进而组成任意复杂的逻辑关系，若将M-P模型按一定方式组织起来，可以构成具有逻辑功能的神经网络
+​ $$net{j}=\sum{i=1}^{n}w{ij}x{i}$$
+$$net_{j}$$为累加代数和
+​ $$o{j}=f(net{j}-T{j})=f(\sum{i=1}^{n}w{ij}-T{j})$$
+$$T_{j}$$为阈值
+激活函数 也叫连接函数、传递函数、变换函数或者激励函数。用来模拟神经元输出与其激活状态之间的联系：输入达到某个阈值后达到激活状态，否则为抑制肽。不同的激活函数，会使神经元具有不同的信息处理特性。对于神经网络来讲，激活函数的主要作用就是进行线性变换，增加系统的非线性表达函数
+常见激活函数 Sign函数：$$f(x)=sgn(x)$$
+sigmoid函数：$$f(x)=\frac{1}{1+e^{-x}}$$(单极性S函数)
+Tanh函数：$$f(x)=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$$(双极性S函数)
+Arctan函数：$$f(x)=arctan(x)$$
+神经网络模型分类 按照拓扑结果可分为层次结果和互连结构 层次结构  单纯层次结构 层内有互连 输出层到输入层有连接  互连结构  全互联：每个节点和其他所有节点连接 局部互联：每个节点只与其邻近节点有连接 稀疏连接：节点只与少数相距较远的节点有连接  按照信息流量可分为前馈性网络和反馈型网络 前馈型网络 网络信息从输入层到各隐藏层再到输出层逐层前进
+采用单项多层结构，各神经元分层排列，每个神经元只与前一层的神经元项链。接收前一层的输出，并输出给下一层，各层间没有反馈。
+包含三类节点
+ 输入节点：外界信息输入，不进行任何计算，仅向下一层节点传递信息，此层必须有 隐藏节点：接受上一层节点的输入，进行结算，并将信息传到下一层节点，此层可以没有，没有即为单层感知器 输出节点：接收上一层节点的输入，进行计算，并将结果输出，此层必须有  #### 反馈型网络
+反馈网络中所有节点都具有信息处理能力，并且每个节点既可以接受输入同时又可以进行输出
+神经网络学习规则 有监督学习：学习模式为纠错 无监督学习：学习模式为自组织 灌输式学习：学习模式为死记硬背 赫布学习规则 赫布学习规则为前馈、无导师学习。只根据实际输入和输出调整权重
+在赫布学习规则中，学习信号简单的等于神经元的输出：$$r=f(W_{j}^{T}X)$$
+权值向量的调整公式为：$$\Delta W{j}=\eta f(W{j}^{T}X)X, \eta 为常数$$
+权向量各个分量调整为：$$\Delta w{ij}=\eta f(W{j}^{T}X)x{i}=\eta o{j}x_{j},i=0,1,&amp;hellip;,n$$
+赫布学习规则的步骤：</description>
+    </item>
+    
+  </channel>
+</rss>

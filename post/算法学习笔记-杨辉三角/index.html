@@ -8,7 +8,7 @@
 		
 		
 		<meta name="generator" content="Hugo 0.57.2" />
-		<title>深度学习笔记 &middot; LiuHe&#39;s blog</title>
+		<title>杨辉三角 &middot; LiuHe&#39;s blog</title>
 		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
 		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
@@ -42,13 +42,19 @@
             <article>
                 <header>
                     <h1>
-                        深度学习笔记
+                        杨辉三角
                     </h1>
                     <h2 class="headline">
-                    Jan 1, 0001 00:00
-                    · 0 word
-                    · 0 minute read
+                    Sep 21, 2019 14:23
+                    · 90 words
+                    · 1 minute read
                       <span class="tags">
+                      
+                      
+                          
+                              <a href="https://okery.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">算法学习笔记</a>
+                          
+                      
                       
                       </span>
                     </h2>
@@ -56,6 +62,43 @@
                 
                 <section id="post-body">
                     
+
+<p><center><h1>杨辉三角</h1></center></p>
+
+<h3 id="python实现输出指定行数的杨辉三角">python实现输出指定行数的杨辉三角</h3>
+
+<pre><code class="language-python"># -*- coding: utf-8 -*-
+# @Date    : 2019-09-20 14:22:58
+# @Author  : LiuHe (liuh131@163.com)
+# @Link    : https://okery.github.io/
+# @Version : $Id$
+# @Name    : 生成指定行数的杨辉三角
+
+
+# 生成杨辉三角
+def triangle(row):
+    # 使用二维数组存储内容
+    trianles = []
+    for j in range(row):
+        triangle_inner = []
+        for i in range(j):
+            if i == 0 or i == (j - 1):
+                triangle_inner.append(1)
+            else:
+                tmp = trianles[j - 1][i - 1] + trianles[j - 1][i]
+                triangle_inner.append(tmp)
+        trianles.append(triangle_inner)
+    return trianles
+
+
+sanjiao = triangle(6)
+
+for items in sanjiao:
+    for i in items:
+        print(i, end='')
+    print('\n')
+</code></pre>
+
                 </section>
             </article>
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on LiuHe&#39;s blog</title>
+    <link>https://okery.github.io/tags/python/</link>
+    <description>Recent content in python on LiuHe&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Sep 2019 19:23:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://okery.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python学习笔记-小数取整</title>
+      <link>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%B0%8F%E6%95%B0%E5%8F%96%E6%95%B4/</link>
+      <pubDate>Mon, 30 Sep 2019 19:23:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%B0%8F%E6%95%B0%E5%8F%96%E6%95%B4/</guid>
+      <description>取整函数 向下取整 直接使用内置的int()
+四舍五入 对数字进行四舍五入使用round()
+向上取整 使用math模块中的ceil()方法
+分别取整数部分和小数部分 使用math模块中的modf()方法，该方法返回一个包含小数部分和整数部分的元组</description>
+    </item>
+    
+    <item>
+      <title>python常用转义字符</title>
+      <link>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%B8%B8%E7%94%A8%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%B8%B8%E7%94%A8%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/</guid>
+      <description>   转义字符 描述     \&amp;lsquo; 单引号   \&amp;ldquo; 双引号   \ 反斜杠   \b 退格   \000 空额   \n 换行   \v 纵向制表符   \t 横向制表符   \r 回车   \f 换行    </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -8,7 +8,7 @@
 		
 		
 		<meta name="generator" content="Hugo 0.57.2" />
-		<title>python常用制表符 &middot; LiuHe&#39;s blog</title>
+		<title>算法学习笔记-欧几里得算法实现 &middot; LiuHe&#39;s blog</title>
 		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
 		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
@@ -42,79 +42,67 @@
             <article>
                 <header>
                     <h1>
-                        python常用制表符
+                        算法学习笔记-欧几里得算法实现
                     </h1>
                     <h2 class="headline">
-                    Jan 1, 0001 00:00
-                    · 22 words
+                    Sep 18, 2019 14:43
+                    · 55 words
                     · 1 minute read
                       <span class="tags">
+                      
+                      
+                          
+                              <a href="https://okery.github.io/tags/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">算法学习笔记</a>
+                          
+                      
                       
                       </span>
                     </h2>
                 </header>
                 
                 <section id="post-body">
-                    <table>
-<thead>
-<tr>
-<th>转义字符</th>
-<th>描述</th>
-</tr>
-</thead>
+                    
 
-<tbody>
-<tr>
-<td>\&lsquo;</td>
-<td>单引号</td>
-</tr>
+<p><center><h1>欧几里得算法</h1></center>
+欧几里得算法用来计算两个整数的最大公约数</p>
 
-<tr>
-<td>\&ldquo;</td>
-<td>双引号</td>
-</tr>
+<h4 id="公式">公式</h4>
 
-<tr>
-<td>\</td>
-<td>反斜杠</td>
-</tr>
+<p>​   gcd(a, b) = gcd(b, a mod b)</p>
 
-<tr>
-<td>\b</td>
-<td>退格</td>
-</tr>
+<h4 id="原理">原理</h4>
 
-<tr>
-<td>\000</td>
-<td>空额</td>
-</tr>
+<p>​   两个整数的最大公约数等于其中较小的那个数和两数相除的最大公约数</p>
 
-<tr>
-<td>\n</td>
-<td>换行</td>
-</tr>
+<h4 id="实现">实现</h4>
 
-<tr>
-<td>\v</td>
-<td>纵向制表符</td>
-</tr>
+<p>​   递归实现</p>
 
-<tr>
-<td>\t</td>
-<td>横向制表符</td>
-</tr>
+<pre><code class="language-python">def gcd_recursion(a, b):
 
-<tr>
-<td>\r</td>
-<td>回车</td>
-</tr>
+    if b == 0:
+        return a
 
-<tr>
-<td>\f</td>
-<td>换行</td>
-</tr>
-</tbody>
-</table>
+    return gcd_re(b, a % b)
+
+
+print(gcd_re(6, 4))
+</code></pre>
+
+<p>​   非递归实现</p>
+
+<pre><code class="language-python">def gcd_no_recursion(a, b):
+
+    while b != 0:
+
+        tmp = a % b
+
+        a = b
+
+        b = tmp
+
+    return a
+</code></pre>
 
                 </section>
             </article>

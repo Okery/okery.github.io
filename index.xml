@@ -209,13 +209,12 @@ $$L{\infty}(x{i},x{j})=max{l}|x{i}^{(l)}-x{j}^{l}|$$</description>
     </item>
     
     <item>
-      <title>机器学习笔记-python常用函数</title>
-      <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-python%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</link>
+      <title>python学习笔记-小数取整</title>
+      <link>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%B0%8F%E6%95%B0%E5%8F%96%E6%95%B4/</link>
       <pubDate>Mon, 30 Sep 2019 19:23:58 +0800</pubDate>
       
-      <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-python%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</guid>
-      <description>前言 ​ python学习笔记
-取整函数 向下取整 直接使用内置的int()
+      <guid>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%B0%8F%E6%95%B0%E5%8F%96%E6%95%B4/</guid>
+      <description>取整函数 向下取整 直接使用内置的int()
 四舍五入 对数字进行四舍五入使用round()
 向上取整 使用math模块中的ceil()方法
 分别取整数部分和小数部分 使用math模块中的modf()方法，该方法返回一个包含小数部分和整数部分的元组</description>
@@ -247,15 +246,6 @@ KNN分类算法的优缺点 优点 ​ 精度高、对异常值不敏感、无�
     </item>
     
     <item>
-      <title>TensorFlow笔记</title>
-      <link>https://okery.github.io/post/tensorflow%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Mon, 23 Sep 2019 19:23:58 +0800</pubDate>
-      
-      <guid>https://okery.github.io/post/tensorflow%E7%AC%94%E8%AE%B0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>机器学习笔记-逻辑回归</title>
       <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/</link>
       <pubDate>Mon, 23 Sep 2019 15:37:58 +0800</pubDate>
@@ -274,20 +264,20 @@ KNN分类算法的优缺点 优点 ​ 精度高、对异常值不敏感、无�
     
     <item>
       <title>杨辉三角</title>
-      <link>https://okery.github.io/post/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</link>
+      <link>https://okery.github.io/post/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</link>
       <pubDate>Sat, 21 Sep 2019 14:23:58 +0800</pubDate>
       
-      <guid>https://okery.github.io/post/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</guid>
+      <guid>https://okery.github.io/post/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</guid>
       <description>杨辉三角
 python实现输出指定行数的杨辉三角 # -*- coding: utf-8 -*- # @Date : 2019-09-20 14:22:58 # @Author : LiuHe (liuh131@163.com) # @Link : https://okery.github.io/ # @Version : $Id$ # @Name : 生成指定行数的杨辉三角 # 生成杨辉三角 def triangle(row): # 使用二维数组存储内容 trianles = [] for j in range(row): triangle_inner = [] for i in range(j): if i == 0 or i == (j - 1): triangle_inner.append(1) else: tmp = trianles[j - 1][i - 1] + trianles[j - 1][i] triangle_inner.</description>
     </item>
     
     <item>
       <title>假设检验-T检验</title>
-      <link>https://okery.github.io/post/t%E6%A3%80%E9%AA%8C/</link>
+      <link>https://okery.github.io/post/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%94%E8%AE%B0-t%E6%A3%80%E9%AA%8C/</link>
       <pubDate>Fri, 20 Sep 2019 21:23:58 +0800</pubDate>
       
-      <guid>https://okery.github.io/post/t%E6%A3%80%E9%AA%8C/</guid>
+      <guid>https://okery.github.io/post/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%94%E8%AE%B0-t%E6%A3%80%E9%AA%8C/</guid>
       <description>假设检验-T检验
 假设检验概念 ​ 假设检验也叫显著性检验，是以小概率反证法的逻辑推理，判断假设是否成立的统计方法，它首先假设样本对应的总体参数（或分布）与某个已知总体参数（或分布）相同，然后根据统计量的分布规律来分析样本数据，利用样本信息判断是否支持这种假设，并对检验假设做出取舍抉择，做出的结论是概率性的，不是觉得的肯定和否定。
 T检验 ​ T检验是用于两个样本平均值差异程度的检验方法。
@@ -326,7 +316,7 @@ T检验 ​ T检验是用于两个样本平均值差异程度的检验方法。
     </item>
     
     <item>
-      <title>筛选质数算法</title>
+      <title>算法学习笔记-筛选质数算法</title>
       <link>https://okery.github.io/post/%E7%AD%9B%E9%80%89%E8%B4%A8%E6%95%B0%E7%AE%97%E6%B3%95/</link>
       <pubDate>Wed, 18 Sep 2019 20:23:58 +0800</pubDate>
       
@@ -411,11 +401,11 @@ T检验 ​ T检验是用于两个样本平均值差异程度的检验方法。
     </item>
     
     <item>
-      <title>欧几里得算法实现</title>
-      <link>https://okery.github.io/post/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95/</link>
+      <title>算法学习笔记-欧几里得算法实现</title>
+      <link>https://okery.github.io/post/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</link>
       <pubDate>Wed, 18 Sep 2019 14:43:58 +0800</pubDate>
       
-      <guid>https://okery.github.io/post/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://okery.github.io/post/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/</guid>
       <description> 欧几里得算法 欧几里得算法用来计算两个整数的最大公约数
 公式 ​ gcd(a, b) = gcd(b, a mod b)
 原理 ​ 两个整数的最大公约数等于其中较小的那个数和两数相除的最大公约数
@@ -491,10 +481,10 @@ J = sum(((X * theta) - y) .^ 2)/(2*m);  笔记：.</description>
     
     <item>
       <title>python常用转义字符</title>
-      <link>https://okery.github.io/post/python%E5%B8%B8%E7%94%A8%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/</link>
+      <link>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%B8%B8%E7%94%A8%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://okery.github.io/post/python%E5%B8%B8%E7%94%A8%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/</guid>
+      <guid>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%B8%B8%E7%94%A8%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/</guid>
       <description>   转义字符 描述     \&amp;lsquo; 单引号   \&amp;ldquo; 双引号   \ 反斜杠   \b 退格   \000 空额   \n 换行   \v 纵向制表符   \t 横向制表符   \r 回车   \f 换行    </description>
     </item>
     
@@ -506,15 +496,6 @@ J = sum(((X * theta) - y) .^ 2)/(2*m);  笔记：.</description>
       <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/</guid>
       <description>最大似然估计
 原理 ​ 已知某个随机样本满足某种概率分布，但是其中具体的参数不清楚，参数估计就是通过若干次试验，观察其结果，利用结果退出参数的大概值。思想是：已知某个参数从能使这个样本出现的概率最大，那么就干脆将这个参数作为估计的真实值</description>
-    </item>
-    
-    <item>
-      <title>深度学习笔记</title>
-      <link>https://okery.github.io/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://okery.github.io/post/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</guid>
-      <description></description>
     </item>
     
   </channel>

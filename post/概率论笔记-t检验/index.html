@@ -8,7 +8,7 @@
 		
 		
 		<meta name="generator" content="Hugo 0.57.2" />
-		<title>欧几里得算法实现 &middot; LiuHe&#39;s blog</title>
+		<title>假设检验-T检验 &middot; LiuHe&#39;s blog</title>
 		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
 		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
@@ -42,13 +42,19 @@
             <article>
                 <header>
                     <h1>
-                        欧几里得算法实现
+                        假设检验-T检验
                     </h1>
                     <h2 class="headline">
-                    Sep 18, 2019 14:43
-                    · 55 words
+                    Sep 20, 2019 21:23
+                    · 11 words
                     · 1 minute read
                       <span class="tags">
+                      
+                      
+                          
+                              <a href="https://okery.github.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA">概率论</a>
+                          
+                      
                       
                       </span>
                     </h2>
@@ -57,46 +63,21 @@
                 <section id="post-body">
                     
 
-<p><center><h1>欧几里得算法</h1></center>
-欧几里得算法用来计算两个整数的最大公约数</p>
+<p><center><h1>假设检验-T检验</h1></center></p>
 
-<h4 id="公式">公式</h4>
+<h3 id="假设检验概念">假设检验概念</h3>
 
-<p>​   gcd(a, b) = gcd(b, a mod b)</p>
+<p>​   假设检验也叫显著性检验，是以小概率反证法的逻辑推理，判断假设是否成立的统计方法，它首先假设样本对应的总体参数（或分布）与某个已知总体参数（或分布）相同，然后根据统计量的分布规律来分析样本数据，利用样本信息判断是否支持这种假设，并对检验假设做出取舍抉择，做出的结论是概率性的，不是觉得的肯定和否定。</p>
 
-<h4 id="原理">原理</h4>
+<h3 id="t检验">T检验</h3>
 
-<p>​   两个整数的最大公约数等于其中较小的那个数和两数相除的最大公约数</p>
+<p>​   T检验是用于两个样本平均值差异程度的检验方法。</p>
 
-<h4 id="实现">实现</h4>
+<p>​   T检验的适用条件为样本分布符合正态分布</p>
 
-<p>​   递归实现</p>
+<p>​</p>
 
-<pre><code class="language-python">def gcd_recursion(a, b):
-
-    if b == 0:
-        return a
-
-    return gcd_re(b, a % b)
-
-
-print(gcd_re(6, 4))
-</code></pre>
-
-<p>​   非递归实现</p>
-
-<pre><code class="language-python">def gcd_no_recursion(a, b):
-
-    while b != 0:
-
-        tmp = a % b
-
-        a = b
-
-        b = tmp
-
-    return a
-</code></pre>
+<p>​</p>
 
                 </section>
             </article>
