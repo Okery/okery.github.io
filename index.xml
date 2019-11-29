@@ -214,7 +214,11 @@ $$L{\infty}(x{i},x{j})=max{l}|x{i}^{(l)}-x{j}^{l}|$$</description>
       <pubDate>Mon, 30 Sep 2019 19:23:58 +0800</pubDate>
       
       <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-python%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</guid>
-      <description>前言 ​</description>
+      <description>前言 ​ python学习笔记
+取整函数 向下取整 直接使用内置的int()
+四舍五入 对数字进行四舍五入使用round()
+向上取整 使用math模块中的ceil()方法
+分别取整数部分和小数部分 使用math模块中的modf()方法，该方法返回一个包含小数部分和整数部分的元组</description>
     </item>
     
     <item>
