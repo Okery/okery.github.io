@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>机器学习 on LiuHe&#39;s blog</title>
+    <link>https://okery.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 机器学习 on LiuHe&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Aug 2019 14:43:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://okery.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>吴恩达机器学习—单变量线性回归作业(matlab)</title>
+      <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%8D%95%E5%8F%98%E9%87%8F%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%BD%9C%E4%B8%9A/</link>
+      <pubDate>Fri, 16 Aug 2019 14:43:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%8D%95%E5%8F%98%E9%87%8F%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%BD%9C%E4%B8%9A/</guid>
+      <description>吴恩达机器学习——单变量线性回归作业（matlab） 1.Simple Octave/MATLAB function warmUpExercise.m：生成一个5 * 5 的单位矩阵 实现代码：
+A = eye(5)	 笔记:matlab中eye(n)函数生成一个n*n的单位矩阵
+结果：
+2.Plotting the Data plotData.m：绘制数据，将数据集绘制在二维空间 实现代码:
+plot(x,y,&#39;rx&#39;,&#39;MarkerSize&#39;,10); %Plot the data ylabel(&#39;Profit in $10,000s&#39;);	%set the y-axis label xlabel(&#39;Pupulation of City in 10,000s&#39;); %set the x-axis label  笔记：plot(x,y,&amp;lsquo;rx&amp;rsquo;,&amp;lsquo;MarkerSize&amp;rsquo;,10)参数含义:x、y为点的坐标，rx表示用红色的X形状来表示点，MarkerSize、10表示X形状的大小
+结果：
+​ ​
+3.Computing the cost J(theta) computeCost.m：计算代价函数值 假设函数： $$ h{\theta}(x)=\theta^{\tau}x=\theta{0}+\theta{1}x $$ 代价函数： $$ J(\theta)=\tfrac{1}{2m}\sum{i=1}^{m}(h_{\theta}(x^{i})-y^{i})^{2} $$ 实现代码：
+J = sum(((X * theta) - y) .^ 2)/(2*m);  笔记：.</description>
+    </item>
+    
+  </channel>
+</rss>
