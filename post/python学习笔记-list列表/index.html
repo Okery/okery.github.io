@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.57.2" />
+		<title>python学习笔记-list列表 &middot; LiuHe&#39;s blog</title>
+		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
+		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://okery.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://okery.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://okery.github.io/posts'>Archive</a>
+	<a href='https://okery.github.io/tags'>Tags</a>
+	<a href='https://okery.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        python学习笔记-list列表
+                    </h1>
+                    <h2 class="headline">
+                    Sep 20, 2019 19:23
+                    · 206 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://okery.github.io/tags/python">python</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<h4 id="list列表">list列表</h4>
+
+<p>list是有序集合，没有固定大小，根据数据量的不同可以动态变化，索引从0开始</p>
+
+<h4 id="访问元素">访问元素</h4>
+
+<p>使用索引访问元素</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+# 取 lisi， 索引为0
+print(classmates[0])
+</code></pre>
+
+<p>若要取最后元素，可以使用-1做索引, 依次类推，可以用-2取倒数第二个元素, &hellip;&hellip;</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+# 取 zhangsan，索引使用-1
+print(classmates[-1])
+</code></pre>
+
+<p>index(), 返回列表中第一个值为x的元素的索引，若没有，则返回一个错误</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+lisi_index = classmates.index('lisi')
+print(lisi_index)
+</code></pre>
+
+<p>统计列表中元素x出现的次数</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+lisi_count = classmates.count('lis')
+print(lisi_count)
+</code></pre>
+
+<h4 id="列表分割">列表分割</h4>
+
+<p>列表的分割通过设置头下标和尾下标: [头下标: 尾下标] 来实现, 取值范围是左闭右开</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan', 'wangwu']
+# 读取zhangsan wangwu
+print(classmates[1: 3])
+# 从第一个元素读取到zhangsan， 当下标为0或者-1时，可以缺省
+print(classmates[: 2])
+</code></pre>
+
+<h4 id="追加元素">追加元素</h4>
+
+<p>list是可变有序列表，使用append函数添加元素</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+# 添加元素 wangermazi
+classmates.append('wangermazi')
+print(classmates)
+</code></pre>
+
+<p>也可以使用索引将元素插入到指定位置</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+# 将wangermazi插入到索引为1的位置
+classmates.insert(1, 'wangermazi')
+print(classmates)
+</code></pre>
+
+<p>将一个列表中的所有元素添加到另一个列表</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+classmates2 = ['wangwu']
+classmates.extend(classmates2)
+print(classmates)
+</code></pre>
+
+<h4 id="删除元素">删除元素</h4>
+
+<p>删除list末尾的元素，使用pop函数</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+# 删掉zhangsan
+classmates.pop()
+print(classmates)
+</code></pre>
+
+<p>要删除指定位置的元素，使用pop(i)方法，其中i为索引位置</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+# 删掉zhangsan
+classmates.pop(1)
+print(classmates)
+</code></pre>
+
+<p>删除列表中值为x的第一个元素</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+classmates.remove('lisi')
+print(classmates)
+</code></pre>
+
+<p>列表清空，删除所有元素</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+classmates.clear()
+print(classmates)
+</code></pre>
+
+<h4 id="替换元素">替换元素</h4>
+
+<p>将list中某个元素替换成另外的元素，直接使用索引进行赋值</p>
+
+<pre><code class="language-python">classmates= ['lisi', 'zhangsan']
+# 将zhangsan 替换成wangermazi
+classmates[1] = 'wangermazi'
+print(classmates)
+</code></pre>
+
+<h4 id="排序">排序</h4>
+
+<p>list.sort(cmp=None, key=None, reverse=False)，对原列表进行排列，不产生新列表</p>
+
+<p>cmp: 可选参数，如果指定了该参数将会使用该参数的方法进行排序</p>
+
+<p>key：主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取字可迭代对象中，指定可迭代对象中的一个元素进行排序</p>
+
+<p>reverse：排序规则，reverse为False表示降序，为True表示正序排序（默认）</p>
+
+<pre><code class="language-python">classmates = [1, 3, 2, 8, 4]
+classmates.sort()
+print(classmates)
+</code></pre>
+
+<p>list.reverse() 列表倒序排序, 在原数组上进行排序</p>
+
+<pre><code class="language-python">classamtes=[1, 3, 2, 8, 4]
+classmates.reverse()
+print(classmates)
+</code></pre>
+
+<h4 id="更多特性">更多特性</h4>
+
+<p>list里面的元素的数据类型可以不同</p>
+
+<pre><code class="language-python">L = ['lisi', 0, True]
+# 所包含元素甚至可以是list
+L = ['lisi', ['wangwu', 'zhaoliu']]
+print(L)
+# 要得到zhaoliu, 则这样取
+print(L[1][1])
+</code></pre>
+
+<p>多个list列表可以直接进行 + 操作</p>
+
+<pre><code class="language-python">l1 = [1, 'A']
+l2 = [1, 'B']
+l3 = l1+l2
+print(l3)
+# l3输出为 [1, 'A', 'B']
+</code></pre>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://okery.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://okery.github.io/js/main.js"></script>
+<script src="https://okery.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
