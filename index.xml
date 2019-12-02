@@ -526,10 +526,10 @@ J = sum(((X * theta) - y) .^ 2)/(2*m);  笔记：.</description>
     
     <item>
       <title>机器学习笔记-最大似然估计</title>
-      <link>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/</link>
+      <link>https://okery.github.io/post/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%94%E8%AE%B0-%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://okery.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/</guid>
+      <guid>https://okery.github.io/post/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%94%E8%AE%B0-%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/</guid>
       <description>最大似然估计
 原理 ​ 已知某个随机样本满足某种概率分布，但是其中具体的参数不清楚，参数估计就是通过若干次试验，观察其结果，利用结果退出参数的大概值。思想是：已知某个参数从能使这个样本出现的概率最大，那么就干脆将这个参数作为估计的真实值</description>
     </item>
