@@ -27,9 +27,33 @@ classmates = ['lisi', 'zhangsan']
 print(classmates[-1])
 ```
 
+index(), 返回列表中第一个值为x的元素的索引，若没有，则返回一个错误
+
+```python
+classmates = ['lisi', 'zhangsan']
+lisi_index = classmates.index('lisi')
+print(lisi_index)
+```
+
+统计列表中元素x出现的次数
+
+```python
+classmates = ['lisi', 'zhangsan']
+lisi_count = classmates.count('lis')
+print(lisi_count)
+```
+
 #### 列表分割
 
-列表的分割通过设置
+列表的分割通过设置头下标和尾下标: [头下标: 尾下标] 来实现, 取值范围是左闭右开
+
+```python
+classmates = ['lisi', 'zhangsan', 'wangwu']
+# 读取zhangsan wangwu
+print(classmates[1: 3])
+# 从第一个元素读取到zhangsan， 当下标为0或者-1时，可以缺省
+print(classmates[: 2])
+```
 
 #### 追加元素
 
@@ -48,6 +72,15 @@ print(classmates)
 classmates = ['lisi', 'zhangsan']
 # 将wangermazi插入到索引为1的位置
 classmates.insert(1, 'wangermazi')
+print(classmates)
+```
+
+将一个列表中的所有元素添加到另一个列表
+
+```python
+classmates = ['lisi', 'zhangsan']
+classmates2 = ['wangwu']
+classmates.extend(classmates2)
 print(classmates)
 ```
 
@@ -70,6 +103,16 @@ classmates = ['lisi', 'zhangsan']
 classmates.pop(1)
 print(classmates)
 ```
+
+删除列表中值为x的第一个元素
+
+```python
+classmates = ['lisi', 'zhangsan']
+classmates.remove('lisi')
+print(classmates)
+```
+
+列表清空，删除所有元素
 
 #### 替换元素
 
