@@ -1,0 +1,107 @@
+---
+title: "python学习笔记-list列表"
+date: 2019-09-30T19:23:58+08:00
+tags: ['python']
+draft: true
+---
+
+#### list列表
+
+list是有序集合，没有固定大小，根据数据量的不同可以动态变化，索引从0开始
+
+#### 访问元素
+
+使用索引访问元素
+
+```python
+classmates = ['lisi', 'zhangsan']
+# 取 lisi， 索引为0
+print(classmates[0])
+```
+
+若要取最后元素，可以使用-1做索引, 依次类推，可以用-2取倒数第二个元素, ......
+
+```python
+classmates = ['lisi', 'zhangsan']
+# 取 zhangsan，索引使用-1
+print(classmates[-1])
+```
+
+#### 列表分割
+
+列表的分割通过设置
+
+#### 追加元素
+
+list是可变有序列表，使用append函数添加元素
+
+```python
+classmates = ['lisi', 'zhangsan']
+# 添加元素 wangermazi
+classmates.append('wangermazi')
+print(classmates)
+```
+
+也可以使用索引将元素插入到指定位置
+
+```python
+classmates = ['lisi', 'zhangsan']
+# 将wangermazi插入到索引为1的位置
+classmates.insert(1, 'wangermazi')
+print(classmates)
+```
+
+#### 删除元素
+
+删除list末尾的元素，使用pop函数
+
+```python
+classmates = ['lisi', 'zhangsan']
+# 删掉zhangsan
+classmates.pop()
+print(classmates)
+```
+
+要删除指定位置的元素，使用pop(i)方法，其中i为索引位置
+
+```python
+classmates = ['lisi', 'zhangsan']
+# 删掉zhangsan
+classmates.pop(1)
+print(classmates)
+```
+
+#### 替换元素
+
+将list中某个元素替换成另外的元素，直接使用索引进行赋值
+
+```python
+classmates= ['lisi', 'zhangsan']
+# 将zhangsan 替换成wangermazi
+classmates[1] = 'wangermazi'
+print(classmates)
+```
+
+#### 更多特性
+
+list里面的元素的数据类型可以不同
+
+```python
+L = ['lisi', 0, True]
+# 所包含元素甚至可以是list
+L = ['lisi', ['wangwu', 'zhaoliu']]
+print(L)
+# 要得到zhaoliu, 则这样取
+print(L[1][1])
+```
+
+多个list列表可以直接进行 + 操作
+
+```python
+l1 = [1, 'A']
+l2 = [1, 'B']
+l3 = l1+l2
+print(l3)
+# l3输出为 [1, 'A', 'B']
+```
+
