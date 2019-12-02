@@ -46,8 +46,8 @@
                     </h1>
                     <h2 class="headline">
                     Oct 5, 2019 14:43
-                    · 95 words
-                    · 1 minute read
+                    · 485 words
+                    · 3 minute read
                       <span class="tags">
                       
                       
@@ -207,6 +207,172 @@
 <ol>
 <li>返回2，直至不能继续未知，得到损失函数最小的子树Tα</li>
 </ol>
+
+<h3 id="代码实现">代码实现</h3>
+
+<pre><code class="language-python"># -*- coding: utf-8 -*-
+&quot;&quot;&quot;
+@File    :   decision_tree_action2.py    
+@Contact :   13132515202@163.com
+
+@Modify Time      @Author    @Version    @Description
+------------      -------    --------    -----------
+2019/12/2 19:14   LiuHe      1.0         决策树代码实现
+&quot;&quot;&quot;
+from math import log
+import operator
+
+
+def calc_shannon_ent(dataset):
+    &quot;&quot;&quot;
+    计算香农熵
+    :param dataset: 数据集
+    :return: 数据集香农熵
+    &quot;&quot;&quot;
+    num_samples = len(dataset)
+    label_counts = {}
+
+    for allFeatureVector in dataset:
+        current_label = allFeatureVector[-1]
+        if current_label not in label_counts.keys():
+            label_counts[current_label] = 0
+        label_counts[current_label] += 1
+    entropy = 0.0
+
+    for key in label_counts:
+        property = float(label_counts[key]) / num_samples
+        entropy -= property * log(property, 2)
+
+    return entropy
+
+
+def creat_data_set():
+    &quot;&quot;&quot;
+    生成数据
+    :return: 训练集
+    &quot;&quot;&quot;
+    dataset = [[1, 1, 'yes'], [1, 1, 'yes'], [1, 0, 'no'], [0, 1, 'no'], [0, 0, 'no']]
+    labels = ['no surfacing', 'flippers']
+
+    return dataset, labels
+
+
+def get_sub_data_set(dataset, colIndex, value):
+    &quot;&quot;&quot;
+    取出在该特征取值下的子数据集
+    :param dataset: 数据集
+    :param colIndex: 特征索引
+    :param value: 特征所有取值
+    :return: 子数据集
+    &quot;&quot;&quot;
+    sub_data_set = []
+
+    for row_vector in dataset:
+        if row_vector[colIndex] == value:
+            sub_row_vector = row_vector[:colIndex]
+            sub_row_vector.extend(row_vector[colIndex+1:])
+            sub_data_set.append(sub_row_vector)
+
+    return sub_data_set
+
+
+def best_feat_to_get_subdataset(dataset):
+    &quot;&quot;&quot;
+    选择最优的特征, 以便得到最优的子数据集
+    :param dataset: 数据集
+    :return: 最优特征在数据集中的列索引
+    &quot;&quot;&quot;
+
+    num_feature = len(dataset[0]) - 1
+    base_entropy = calc_shannon_ent(dataset)
+    best_info_gain = 0.0
+    best_feature = -1
+
+    for i in range(num_feature):
+        feat_i_values = [example[i] for example in dataset]
+        unique_values = set(feat_i_values)
+        feat_i_entropy = 0.0
+        for value in unique_values:
+            sub_data_set = get_sub_data_set(dataset, i, value)
+            prob_i = len(sub_data_set)/float(len(dataset))
+            feat_i_entropy += prob_i * calc_shannon_ent(sub_data_set)
+        info_gain_i = base_entropy - feat_i_entropy
+        if info_gain_i &gt; best_info_gain:
+            best_info_gain = info_gain_i
+            best_feature = i
+
+    return best_feature
+
+
+def most_class(class_list):
+    &quot;&quot;&quot;
+    找出该数据集个数最多的类别
+    :param class_list: 子数据集的类别标签列
+    :return: 子数据集中个数最多的类别标签
+    &quot;&quot;&quot;
+    class_count = {}
+
+    for class_i in class_list:
+        if class_i not in class_count.keys():
+            class_count[class_i] = 0
+        class_count[class_i] += 1
+    sorted_class_count = sorted(class_count.iteritems(),
+                                key=operator.itemgetter(1), reverse=True)
+
+    return sorted_class_count[0][0]
+
+
+def creat_tree(dataset, labels):
+    &quot;&quot;&quot;
+    构造树
+    :param dataset: 数据集
+    :param labels: 标签集
+    :return: 树
+    &quot;&quot;&quot;
+    class_list = [example[-1] for example in dataset]
+    if class_list.count(class_list[0]) == len(class_list):
+        return class_list[0]
+    if len(dataset[0]) == 1:
+        return most_class(class_list)
+
+    best_feat = best_feat_to_get_subdataset(dataset)
+    best_feat_label = labels[best_feat]
+    my_tree = {best_feat_label: {}}
+
+    del (labels[best_feat])
+    best_feat_values = [example[best_feat] for example in dataset]
+    unique_best_feat_values = set(best_feat_values)
+    for value in unique_best_feat_values:
+        sub_dataset = best_feat_to_get_subdataset(dataset, best_feat, value)
+        sub_labels = labels[:]
+        my_tree[best_feat_label][value] = creat_tree(sub_dataset, sub_labels)
+
+    return my_tree
+
+
+def classify(input_tree, feat_labels, test_feat_value):
+    &quot;&quot;&quot;
+    调用训练决策树对测试数据打上类别标签
+    :param input_tree: 测试特征数据
+    :param feat_labels: 测试特征数据
+    :param test_feat_value: 测试特征数据
+    :return: 测试特征数据所属类别
+    &quot;&quot;&quot;
+    first_str = input_tree.keys()[0]
+    second_dict = input_tree[first_str]
+    feat_index = feat_labels.index(first_str)
+    for firstStr_value in second_dict.keys():
+        if test_feat_value[feat_index] == firstStr_value:
+            if type(second_dict[firstStr_value]).__name__ == 'dict':
+                class_label = classify(second_dict[firstStr_value], feat_labels, test_feat_value)
+            else:
+                class_label = second_dict[firstStr_value]
+
+    return class_label
+
+
+
+</code></pre>
 
                 </section>
             </article>
