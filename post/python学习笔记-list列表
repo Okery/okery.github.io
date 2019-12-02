@@ -114,6 +114,12 @@ print(classmates)
 
 列表清空，删除所有元素
 
+```python
+classmates = ['lisi', 'zhangsan']
+classmates.clear()
+print(classmates)
+```
+
 #### 替换元素
 
 将list中某个元素替换成另外的元素，直接使用索引进行赋值
@@ -122,6 +128,30 @@ print(classmates)
 classmates= ['lisi', 'zhangsan']
 # 将zhangsan 替换成wangermazi
 classmates[1] = 'wangermazi'
+print(classmates)
+```
+
+#### 排序
+
+list.sort(cmp=None, key=None, reverse=False)，对原列表进行排列，不产生新列表
+
+cmp: 可选参数，如果指定了该参数将会使用该参数的方法进行排序
+
+key：主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取字可迭代对象中，指定可迭代对象中的一个元素进行排序
+
+reverse：排序规则，reverse为False表示降序，为True表示正序排序（默认）
+
+```python
+classmates = [1, 3, 2, 8, 4]
+classmates.sort()
+print(classmates)
+```
+
+list.reverse() 列表倒序排序, 在原数组上进行排序
+
+```python
+classamtes=[1, 3, 2, 8, 4]
+classmates.reverse()
 print(classmates)
 ```
 
