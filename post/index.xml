@@ -330,7 +330,7 @@ python实现输出指定行数的杨辉三角 # -*- coding: utf-8 -*- # @Date : 
     </item>
     
     <item>
-      <title>假设检验-T检验</title>
+      <title>概率论笔记-T检验</title>
       <link>https://okery.github.io/post/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%94%E8%AE%B0-t%E6%A3%80%E9%AA%8C/</link>
       <pubDate>Fri, 20 Sep 2019 21:23:58 +0800</pubDate>
       
@@ -377,7 +377,7 @@ classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;, &#39;wangwu&#39;] # 读取zhan
     </item>
     
     <item>
-      <title>机器学习笔记-最大似然估计</title>
+      <title>概率论笔记-最大似然估计</title>
       <link>https://okery.github.io/post/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%94%E8%AE%B0-%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/</link>
       <pubDate>Fri, 20 Sep 2019 09:23:58 +0800</pubDate>
       
