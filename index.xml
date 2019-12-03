@@ -57,6 +57,29 @@ def num_only_once(nums): &amp;quot;&amp;quot;&amp;quot; 不使用额外空间实
     </item>
     
     <item>
+      <title>leetcode刷题-945-使数组唯一的最小增量</title>
+      <link>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-945-%E4%BD%BF%E6%95%B0%E7%BB%84%E5%94%AF%E4%B8%80%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A2%9E%E9%87%8F/</link>
+      <pubDate>Fri, 25 Oct 2019 14:43:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-945-%E4%BD%BF%E6%95%B0%E7%BB%84%E5%94%AF%E4%B8%80%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A2%9E%E9%87%8F/</guid>
+      <description>问题描述 给定整数数组 A，每次 move 操作将会选择任意 A[i]，并将其递增 1。
+返回使 A 中的每个值都是唯一的最少操作次数。
+示例 示例 1:
+输入：[1,2,2] 输出：1 解释：经过一次 move 操作，数组将变为 [1, 2, 3]。 示例 2:
+输入：[3,2,1,2,1,7] 输出：6 解释：经过 6 次 move 操作，数组将变为 [3, 4, 1, 2, 5, 7]。 可以看出 5 次或 5 次以下的 move 操作是不能让数组的每个值唯一的。
+实现 实现1 字典存储元素及元素重复情况，重复的逐个进行计算 A_len: A数组长度，用于遍历
+A_dic: 存储数组元素以及元素出现次数
+repeates: 存储有重复的元素
+repeate_done: 以完成递增操作的元素以及递增数值
+move_sum: 递增操作总次数
+将数组使用数据类型为字典的A_dic存储，数组元素对应key值，元素数量对应value值
+遍历A_dic中出现次数大于1的元素，将其放入到repeates中
+遍历repeates数组，开始进行递增操作，先检查是否已经进行过相同元素的操作，若有，则从上次相同元素的递增次数开始探测，若没有，则从该元素的下一位开始探测，若有空位，则move_sum加上探测成功的递增次数，若没有，继续进行下一位的探测，直至找到空位为止
+时间复杂度为O(n^2)
+def min_increament_for_unique(A): &amp;quot;&amp;quot;&amp;quot; hash存储，找相邻的空位置相加 &amp;quot;&amp;quot;&amp;quot; A_len = len(A) A_dic = {} repeates = [] repeate_done = {} move_sum = 0 for i in range(A_len): if A[i] in A_dic: A_dic[A[i]] += 1 repeates.</description>
+    </item>
+    
+    <item>
       <title>leetcode刷题-11-盛最多水的容器</title>
       <link>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/</link>
       <pubDate>Tue, 22 Oct 2019 14:43:58 +0800</pubDate>
@@ -363,8 +386,9 @@ T检验 ​ T检验是用于两个样本平均值差异程度的检验方法。
 classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] # 取 lisi， 索引为0 print(classmates[0])  若要取最后元素，可以使用-1做索引, 依次类推，可以用-2取倒数第二个元素, &amp;hellip;&amp;hellip;
 classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] # 取 zhangsan，索引使用-1 print(classmates[-1])  index(), 返回列表中第一个值为x的元素的索引，若没有，则返回一个错误
 classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] lisi_index = classmates.index(&#39;lisi&#39;) print(lisi_index)  统计列表中元素x出现的次数
-classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] lisi_count = classmates.count(&#39;lis&#39;) print(lisi_count)  列表分割 列表的分割通过设置头下标和尾下标: [头下标: 尾下标] 来实现, 取值范围是左闭右开
-classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;, &#39;wangwu&#39;] # 读取zhangsan wangwu print(classmates[1: 3]) # 从第一个元素读取到zhangsan， 当下标为0或者-1时，可以缺省 print(classmates[: 2])  追加元素 list是可变有序列表，使用append函数添加元素</description>
+classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] lisi_count = classmates.count(&#39;lis&#39;) print(lisi_count)  遍历列表 方法1
+classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] for i in classmates: print(&amp;quot;索引：%s 值：%s&amp;quot; % (classmates.index(i), i))  方法2
+classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] for i in range(len(classmates)): print(&#39;索引：%s 值：%s&#39; % (i, classmates[i]))  方法3</description>
     </item>
     
     <item>

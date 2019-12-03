@@ -55,8 +55,9 @@
 classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] # 取 lisi， 索引为0 print(classmates[0])  若要取最后元素，可以使用-1做索引, 依次类推，可以用-2取倒数第二个元素, &amp;hellip;&amp;hellip;
 classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] # 取 zhangsan，索引使用-1 print(classmates[-1])  index(), 返回列表中第一个值为x的元素的索引，若没有，则返回一个错误
 classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] lisi_index = classmates.index(&#39;lisi&#39;) print(lisi_index)  统计列表中元素x出现的次数
-classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] lisi_count = classmates.count(&#39;lis&#39;) print(lisi_count)  列表分割 列表的分割通过设置头下标和尾下标: [头下标: 尾下标] 来实现, 取值范围是左闭右开
-classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;, &#39;wangwu&#39;] # 读取zhangsan wangwu print(classmates[1: 3]) # 从第一个元素读取到zhangsan， 当下标为0或者-1时，可以缺省 print(classmates[: 2])  追加元素 list是可变有序列表，使用append函数添加元素</description>
+classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] lisi_count = classmates.count(&#39;lis&#39;) print(lisi_count)  遍历列表 方法1
+classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] for i in classmates: print(&amp;quot;索引：%s 值：%s&amp;quot; % (classmates.index(i), i))  方法2
+classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] for i in range(len(classmates)): print(&#39;索引：%s 值：%s&#39; % (i, classmates[i]))  方法3</description>
     </item>
     
   </channel>

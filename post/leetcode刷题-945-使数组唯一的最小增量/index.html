@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		<meta name="generator" content="Hugo 0.57.2" />
+		<title>leetcode刷题-945-使数组唯一的最小增量 &middot; LiuHe&#39;s blog</title>
+		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
+		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://okery.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://okery.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://okery.github.io/posts'>Archive</a>
+	<a href='https://okery.github.io/tags'>Tags</a>
+	<a href='https://okery.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        leetcode刷题-945-使数组唯一的最小增量
+                    </h1>
+                    <h2 class="headline">
+                    Oct 25, 2019 14:43
+                    · 144 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://okery.github.io/tags/leetcode%E5%88%B7%E9%A2%98">leetcode刷题</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<h3 id="问题描述">问题描述</h3>
+
+<p>给定整数数组 A，每次 <em>move</em> 操作将会选择任意 <code>A[i]</code>，并将其递增 <code>1</code>。</p>
+
+<p>返回使 <code>A</code> 中的每个值都是唯一的最少操作次数。</p>
+
+<h3 id="示例">示例</h3>
+
+<p>示例 1:</p>
+
+<p>输入：[1,2,2]
+输出：1
+解释：经过一次 move 操作，数组将变为 [1, 2, 3]。
+示例 2:</p>
+
+<p>输入：[3,2,1,2,1,7]
+输出：6
+解释：经过 6 次 move 操作，数组将变为 [3, 4, 1, 2, 5, 7]。
+可以看出 5 次或 5 次以下的 move 操作是不能让数组的每个值唯一的。</p>
+
+<h3 id="实现">实现</h3>
+
+<h4 id="实现1-字典存储元素及元素重复情况-重复的逐个进行计算">实现1 字典存储元素及元素重复情况，重复的逐个进行计算</h4>
+
+<p>A_len: A数组长度，用于遍历</p>
+
+<p>A_dic: 存储数组元素以及元素出现次数</p>
+
+<p>repeates: 存储有重复的元素</p>
+
+<p>repeate_done: 以完成递增操作的元素以及递增数值</p>
+
+<p>move_sum: 递增操作总次数</p>
+
+<p>将数组使用数据类型为字典的A_dic存储，数组元素对应key值，元素数量对应value值</p>
+
+<p>遍历A_dic中出现次数大于1的元素，将其放入到repeates中</p>
+
+<p>遍历repeates数组，开始进行递增操作，先检查是否已经进行过相同元素的操作，若有，则从上次相同元素的递增次数开始探测，若没有，则从该元素的下一位开始探测，若有空位，则move_sum加上探测成功的递增次数，若没有，继续进行下一位的探测，直至找到空位为止</p>
+
+<p>时间复杂度为O(n^2)</p>
+
+<pre><code class="language-python">def min_increament_for_unique(A):
+    &quot;&quot;&quot;
+    hash存储，找相邻的空位置相加
+    &quot;&quot;&quot;
+    A_len = len(A)
+    A_dic = {}
+    repeates = []
+    repeate_done = {}
+    move_sum = 0
+
+    for i in range(A_len):
+        if A[i] in A_dic:
+            A_dic[A[i]] += 1
+            repeates.append(A[i])
+        else:
+            A_dic[A[i]] = 1
+
+    for x in repeates:
+        done_flag = False
+        
+        if x in repeate_done:
+            current_move_count = repeate_done[x]+1
+        else:
+            current_move_count = 1
+        
+        while not done_flag:
+            if (x+current_move_count) not in A_dic:
+                A_dic[x+current_move_count] = 1
+                repeate_done[x] = current_move_count
+                move_sum += current_move_count
+                done_flag = True
+            else:
+                current_move_count += 1
+                move_sum += 1
+
+    return move_sum
+</code></pre>
+
+<h4 id="方法2">方法2</h4>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://okery.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://okery.github.io/js/main.js"></script>
+<script src="https://okery.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

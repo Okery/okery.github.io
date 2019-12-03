@@ -46,8 +46,8 @@
                     </h1>
                     <h2 class="headline">
                     Sep 20, 2019 19:23
-                    · 206 words
-                    · 1 minute read
+                    · 254 words
+                    · 2 minute read
                       <span class="tags">
                       
                       
@@ -96,6 +96,31 @@ print(lisi_index)
 lisi_count = classmates.count('lis')
 print(lisi_count)
 </code></pre>
+
+<h4 id="遍历列表">遍历列表</h4>
+
+<p>方法1</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+for i in classmates:
+	print(&quot;索引：%s 值：%s&quot; % (classmates.index(i), i))
+</code></pre>
+
+<p>方法2</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+for i in range(len(classmates)):
+	print('索引：%s 值：%s' % (i, classmates[i]))
+</code></pre>
+
+<p>方法3</p>
+
+<pre><code class="language-python">classmates = ['lisi', 'zhangsan']
+for i, val in enumerate(list):
+	print(&quot;索引：%s 值：%s&quot; % (i, val))
+</code></pre>
+
+<p>补充：enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中</p>
 
 <h4 id="列表分割">列表分割</h4>
 
