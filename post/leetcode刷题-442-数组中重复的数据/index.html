@@ -8,7 +8,7 @@
 		
 		
 		<meta name="generator" content="Hugo 0.57.2" />
-		<title>概率论笔记-最小二乘法 &middot; LiuHe&#39;s blog</title>
+		<title>leetcode刷题-442-数组中重复的数据 &middot; LiuHe&#39;s blog</title>
 		<link rel="shortcut icon" href="https://okery.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://okery.github.io/css/style.css">
 		<link rel="stylesheet" href="https://okery.github.io/css/highlight.css">
@@ -42,17 +42,17 @@
             <article>
                 <header>
                     <h1>
-                        概率论笔记-最小二乘法
+                        leetcode刷题-442-数组中重复的数据
                     </h1>
                     <h2 class="headline">
-                    Sep 20, 2019 21:23
-                    · 1 word
+                    Oct 27, 2019 14:43
+                    · 78 words
                     · 1 minute read
                       <span class="tags">
                       
                       
                           
-                              <a href="https://okery.github.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA">概率论</a>
+                              <a href="https://okery.github.io/tags/leetcode%E5%88%B7%E9%A2%98">leetcode刷题</a>
                           
                       
                       
@@ -61,7 +61,59 @@
                 </header>
                 
                 <section id="post-body">
-                    <p>二乘的意思就是平方，最小二乘法也叫最小平方法，通过最小化误差的平方和寻找数据的最佳函数匹配</p>
+                    
+
+<h3 id="问题描述">问题描述</h3>
+
+<p>给定一个整数数组 a，其中1 ≤ a[i] ≤ n （n为数组长度）, 其中有些元素出现两次而其他元素出现一次。</p>
+
+<p>找到所有出现两次的元素。</p>
+
+<p>你可以不用到任何额外空间并在O(n)时间复杂度内解决这个问题吗？</p>
+
+<h3 id="示例">示例</h3>
+
+<pre><code>输入:
+[4,3,2,7,8,2,3,1]
+
+输出:
+[2,3]
+</code></pre>
+
+<h3 id="实现">实现</h3>
+
+<h4 id="实现1">实现1</h4>
+
+<p>先进行排序，然后使用双指针判断</p>
+
+<p>边界情况要注意，输入为空数组、一个元素的数组情况</p>
+
+<pre><code class="language-python">def find_duplicates(nums):
+    &quot;&quot;&quot;
+    排序 然后双指针验证
+    &quot;&quot;&quot;
+    duplicate_num = []
+    nums_len = len(nums)
+    pre_pointer = 0
+    rear_pointer = 1
+
+    nums.sort()
+
+    while(pre_pointer &lt;= nums_len-2 and nums_len != 0 and nums_len != 1):
+        if nums[pre_pointer] == nums[rear_pointer]:
+            duplicate_num.append(nums[pre_pointer])
+            pre_pointer += 2
+            rear_pointer += 2
+        else:
+            pre_pointer += 1
+            rear_pointer += 1
+
+    return duplicate_num
+
+
+test_nums = [1, 2, 3, 3, 4]
+find_duplicates(test_nums)
+</code></pre>
 
                 </section>
             </article>

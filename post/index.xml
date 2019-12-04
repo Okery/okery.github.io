@@ -6,10 +6,24 @@
     <description>Recent content in Posts on LiuHe&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Oct 2019 19:23:58 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Oct 2019 14:43:58 +0800</lastBuildDate>
     
 	<atom:link href="https://okery.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>leetcode刷题-442-数组中重复的数据</title>
+      <link>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-442-%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Sun, 27 Oct 2019 14:43:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-442-%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E6%8D%AE/</guid>
+      <description> 问题描述 给定一个整数数组 a，其中1 ≤ a[i] ≤ n （n为数组长度）, 其中有些元素出现两次而其他元素出现一次。
+找到所有出现两次的元素。
+你可以不用到任何额外空间并在O(n)时间复杂度内解决这个问题吗？
+示例 输入: [4,3,2,7,8,2,3,1] 输出: [2,3]  实现 实现1 先进行排序，然后使用双指针判断
+边界情况要注意，输入为空数组、一个元素的数组情况
+def find_duplicates(nums): &amp;quot;&amp;quot;&amp;quot; 排序 然后双指针验证 &amp;quot;&amp;quot;&amp;quot; duplicate_num = [] nums_len = len(nums) pre_pointer = 0 rear_pointer = 1 nums.sort() while(pre_pointer &amp;lt;= nums_len-2 and nums_len != 0 and nums_len != 1): if nums[pre_pointer] == nums[rear_pointer]: duplicate_num.append(nums[pre_pointer]) pre_pointer += 2 rear_pointer += 2 else: pre_pointer += 1 rear_pointer += 1 return duplicate_num test_nums = [1, 2, 3, 3, 4] find_duplicates(test_nums)  </description>
+    </item>
     
     <item>
       <title>python常用转义字符</title>
@@ -399,7 +413,7 @@ T检验 ​ T检验是用于两个样本平均值差异程度的检验方法。
       <pubDate>Fri, 20 Sep 2019 21:23:58 +0800</pubDate>
       
       <guid>https://okery.github.io/post/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%94%E8%AE%B0-%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/</guid>
-      <description></description>
+      <description>二乘的意思就是平方，最小二乘法也叫最小平方法，通过最小化误差的平方和寻找数据的最佳函数匹配</description>
     </item>
     
     <item>
@@ -434,7 +448,8 @@ classmates = [&#39;lisi&#39;, &#39;zhangsan&#39;] for i in range(len(classmates)
       
       <guid>https://okery.github.io/post/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%AC%94%E8%AE%B0-%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/</guid>
       <description>最大似然估计
-原理 ​ 已知某个随机样本满足某种概率分布，但是其中具体的参数不清楚，参数估计就是通过若干次试验，观察其结果，利用结果退出参数的大概值。思想是：已知某个参数从能使这个样本出现的概率最大，那么就干脆将这个参数作为估计的真实值</description>
+原理 ​ 已知某个随机样本满足某种概率分布，但是其中具体的参数不清楚，参数估计就是通过若干次试验，观察其结果，利用结果退出参数的大概值。思想是：已知某个参数从能使这个样本出现的概率最大，那么就干脆将这个参数作为估计的真实值
+​ 通俗点解释，就是认为如果某个事件发生了，那么它就必然是概率最大的。通过事实反过来猜测概率情况，就叫似然，通过事实，推断出最有可能的情况，就是最大似然估计。</description>
     </item>
     
     <item>
