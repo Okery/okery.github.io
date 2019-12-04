@@ -6,10 +6,27 @@
     <description>Recent content in 概率论 on LiuHe&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Sep 2019 21:23:58 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 22 Sep 2019 21:23:58 +0800</lastBuildDate>
     
 	<atom:link href="https://okery.github.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>概率论笔记-常用统计量及其意义</title>
+      <link>https://okery.github.io/post/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%BB%9F%E8%AE%A1-%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E9%87%8F%E5%8F%8A%E5%85%B6%E6%84%8F%E4%B9%89/</link>
+      <pubDate>Sun, 22 Sep 2019 21:23:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%BB%9F%E8%AE%A1-%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E9%87%8F%E5%8F%8A%E5%85%B6%E6%84%8F%E4%B9%89/</guid>
+      <description>统计量 定义 设X1, X2, &amp;hellip;, Xn是来自总体X的一个样本，g(X1, X2, &amp;hellip;, Xn)是X1，X2， &amp;hellip;, Xn的函数，若g中不含位置参数，则称g(X1, X2, &amp;hellip;, Xn)是以统计量
+常用统计量 1.样本均值 $$\bar{X}=\frac{1}{n}\sum{X{i}}, 其观察值为\bar{x}=\frac{1}{n}\sum{x{i}}$$
+统计意义：描述数据取值的平均位置
+2.样本方差 $$S^{2}=\frac{1}{n-1}\sum{i=1}^{n}(X{i}-\bar{X})^{2}=\frac{1}{n-1}(\sum{i=1}^{n}X^{2}{i}-n\bar{X}^{2}),其观察值为s^{2}=\frac{1}{n-1}\sum{i=1}^{n}(x{i}-\bar{x})^{2}=\frac{1}{n-1}(\sum{i=1}^{n}x^{2}{i}-n\bar{x}^{2})$$
+统计意义：方差用来计算每一个变量与总体均数之间的差异
+概率意义：用来度量随机变量与数学期望之间的偏离程度
+3.样本标准差 $$\sqrt{\frac{1}{n-1}\sum{i=1}^{n}(X{i}-\bar{X})^{2}}=\sqrt{\frac{1}{n-1}(\sum{i=1}^{n}X^{2}{i}-n\bar{X}^{2})}, 其观察值为s=\sqrt{\frac{1}{n-1}\sum{i=1}^{n}(x{i}-\bar{x})^{2}}=\sqrt{\frac{1}{n-1}(\sum{i=1}^{n}x^{2}{i}-n\bar{x}^{2})}$$
+统计意义：标准差定义是总体各单位标准值与其平均数离差平方的算数平均数的平方根，它反映组内个体间的离散程度，一个较大的标准差，代表大部分数值和其平均值之间差异较大， 一个较小的标准差，代表这些数值较接近平均值
+感谢 https://blog.csdn.net/Hearthougan/article/details/77859173</description>
+    </item>
     
     <item>
       <title>概率论笔记-T检验</title>
