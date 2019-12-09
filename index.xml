@@ -71,6 +71,19 @@ def num_only_once(nums): &amp;quot;&amp;quot;&amp;quot; 不使用额外空间实
     </item>
     
     <item>
+      <title>leetcode刷题-54-螺旋矩阵</title>
+      <link>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</link>
+      <pubDate>Fri, 25 Oct 2019 14:43:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/</guid>
+      <description>问题描述 给定一个包含 m x n 个元素的矩阵（m 行, n 列），请按照顺时针螺旋顺序，返回矩阵中的所有元素。
+示例 示例 1:
+输入: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] 输出: [1,2,3,6,9,8,7,4,5] 示例 2:
+输入: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] 输出: [1,2,3,4,8,12,11,10,9,5,6,7]
+实现 1.模拟螺旋 def spiralOrder(self, matrix): def spiral_coords(r1, c1, r2, c2): for c in range(c1, c2 + 1): yield r1, c for r in range(r1 + 1, r2 + 1): yield r, c2 if r1 &amp;lt; r2 and c1 &amp;lt; c2: for c in range(c2 - 1, c1, -1): yield r2, c for r in range(r2, r1, -1): yield r, c1 if not matrix: return [] ans = [] r1, r2 = 0, len(matrix) - 1 c1, c2 = 0, len(matrix[0]) - 1 while r1 &amp;lt;= r2 and c1 &amp;lt;= c2: for r, c in spiral_coords(r1, c1, r2, c2): ans.</description>
+    </item>
+    
+    <item>
       <title>leetcode刷题-945-使数组唯一的最小增量</title>
       <link>https://okery.github.io/post/leetcode%E5%88%B7%E9%A2%98-945-%E4%BD%BF%E6%95%B0%E7%BB%84%E5%94%AF%E4%B8%80%E7%9A%84%E6%9C%80%E5%B0%8F%E5%A2%9E%E9%87%8F/</link>
       <pubDate>Fri, 25 Oct 2019 14:43:58 +0800</pubDate>
@@ -288,6 +301,22 @@ $$L{2}(x{i},x{j})=(\sum{l=1}^{n}|x{i}^{(l)}-x{j}^{l}|^{2})^{\frac{1}{2}}$$
 $$L{1}(x{i},x{j})=(\sum{l=1}^{n}|x{i}^{(l)}-x{j}^{l}|)$$
 距离最大值 当p趋向无穷时，它是各个坐标距离的最大值，即
 $$L{\infty}(x{i},x{j})=max{l}|x{i}^{(l)}-x{j}^{l}|$$</description>
+    </item>
+    
+    <item>
+      <title>python学习笔记-map、zip函数</title>
+      <link>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-mapzip%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Mon, 30 Sep 2019 19:23:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-mapzip%E5%87%BD%E6%95%B0/</guid>
+      <description>map函数 map函数会根据提供的函数对指定序列做映射， 第一个参数function一参数序列中的每一个元素调用function函数，返回包含每次function函数返回值的新列表 将数组中int类型变量转换成str类型
+a = [1, 2, 3] print(list(map(str, a)))  输出为：
+[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]  也可以对数组进行算数操作, 对a中每个元素进行加法操作
+a = [ [1, 2, 3], [4, 5, 6] ] print(list(map(sum, a)))  输出
+[6, 15]  使用lambda表达式
+a = [1, 2, 3, 4, 5] print(list(map(lambda x: x**2, a)))  输出
+[1, 4, 9, 16, 25]  zip函数 zip函数用于将可迭代的对象作为参数，将对象照片对应的元素打包成一个个元组，然后返回由这些元组组成的列表 若各个迭代器的元素个数不一致，则返回列表长度与最短的对象响应， 利用*操作符，可以将元组解压为列表 在python3.x中，为了减少内存，zip函数返回的是一个对象。如需展示列表，需要手动list()进行转换 将对应位置打包成元组的列表
+a = [1, 2, 3] b = [4, 5, 6] print(list(zip(a, b)))  输出</description>
     </item>
     
     <item>
