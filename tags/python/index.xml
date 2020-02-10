@@ -6,10 +6,37 @@
     <description>Recent content in python on LiuHe&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Oct 2019 19:23:58 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2020 19:23:58 +0800</lastBuildDate>
     
 	<atom:link href="https://okery.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>python学习笔记-理论</title>
+      <link>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%90%86%E8%AE%BA/</link>
+      <pubDate>Thu, 30 Jan 2020 19:23:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%90%86%E8%AE%BA/</guid>
+      <description>函数参数 ​ python中，函数的参数可以有默认值，也支持使用可变参数，所以Python并不需要像其他语言一样支持函数的重载，因为在定义一个函数的时候可以让它有多种不同的使用方式。
+def add(a=0, b=0, c=0): return a+b+c print(add()) print(add(1)) print(add(1, 2)) print(add(1, 2, 3))  变量作用域 ​ Python在查找一个变量时会按照“局部作用域”、“嵌套作用域”、“全局作用域”和“内置作用域”的顺序进行搜索，所谓“内置作用域”就是Python内置的那些标识符，input、print等函数都属于内置作用域。
+​ 使用global关键字来指示函数中的变量来自于全局作用域，如果全局作用域中没有所指示的变量，那么所指示的变量就会被置于全局作用域。
+​ 使用nonlocal关键字来指示变量来自于嵌套作用域。
+​ 在实际开发中，应尽量减少对全局变量的使用，可能会导致对象占用的内存长时间无法被垃圾回收，并且能够降低代码之间耦合度，如果希望将一个局部变量的生命周期延长，使其在定义它的函数调用结束后依然可以使用它的值，可以使用闭包。
+字符串切片 str = &amp;quot;abc123456&amp;quot; print(str[::2]) # ac246 print(str[::-1]) # 654321cba print(str[-3:-1]) # 45  字符串语法糖 a, b = 5, 10 print(&#39;{0} * {1} = {2}&#39;.format(a, b, a * b)) # 可以使用下面的语法糖实现 a, b = 5, 10 print(f&#39;{a} * {b} = {a * b}&#39;)  列表排序 list1 = [&#39;orange&#39;, &#39;apple&#39;, &#39;zoo&#39;, &#39;internationalization&#39;, &#39;blueberry&#39;] # sorted函数返回列表排序后的拷贝不会修改传入的列表 # 通过key关键字参数指定根据字符串长度进行排序而不是默认的字母表顺序 list4 = sorted(list1, key=len) # 给列表对象发出排序消息直接在列表对象上进行排序 list1.</description>
+    </item>
+    
+    <item>
+      <title>python学习笔记-面向对象</title>
+      <link>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Thu, 30 Jan 2020 19:23:58 +0800</pubDate>
+      
+      <guid>https://okery.github.io/post/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+      <description>面向对象 方法名的命名规则 PEP 8要求标识符的名字用全小写多个单词用下划线连接
+class Student(object): def __init__(self, name, age): self.name = name def watch_movie(self): print(self.name)  访问可见性 在Python中，属性和方法的访问权限只有两种，也就是公开的和私有的，如果希望属性是私有的，在给属性命名时可以用两个下划线作为开头
+在实际开发中，并不建议将属性设置为私有的，因为这会导致子类无法访问。大多数Python程序员会遵循一种命名惯例就是让属性名以单下划线开头来表示属性是受保护的，本类之外的代码在访问这样的属性时应该要保持慎重。
+@property装饰器 对于需要受保护、不建议外界直接访问的变量，通过属性的getter、setter方法进行相应的操作。可以使用@property包装器来包装getter和setter方法，使得对属性的访问即安全又方便。
+lass Person(object): def __init__(self, name, age): self._name = name self._age = age # 访问器 - getter方法 @property def name(self): return self._name # 访问器 - getter方法 @property def age(self): return self._age # 修改器 - setter方法 @age.setter def age(self, age): self._age = age def play(self): if self._age &amp;lt;= 16: print(&#39;%s正在玩飞行棋.</description>
+    </item>
     
     <item>
       <title>python常用转义字符</title>
