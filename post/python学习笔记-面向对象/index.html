@@ -46,7 +46,7 @@
                     </h1>
                     <h2 class="headline">
                     Jan 30, 2020 19:23
-                    · 176 words
+                    · 181 words
                     · 1 minute read
                       <span class="tags">
                       
@@ -128,7 +128,7 @@ if __name__ == '__main__':
     main()
 </code></pre>
 
-<h4 id="slots"><strong>slots</strong></h4>
+<h4 id="slots">__slots__</h4>
 
 <p>Python是一门动态语言。通常，动态语言允许我们在程序运行时给对象绑定新的属性或方法，当然也可以对已经绑定的属性和方法进行解绑定。但是如果我们需要限定自定义类型的对象只能绑定某些属性，可以通过在类中定义<strong>slots</strong>变量来进行限定。需要注意的是<strong>slots</strong>的限定只对当前类的对象生效，对子类并不起任何作用。</p>
 
@@ -167,6 +167,16 @@ def main():
     # AttributeError: 'Person' object has no attribute '_is_gay'
     # person._is_gay = True
 </code></pre>
+
+<h4 id="类之间的关系">类之间的关系</h4>
+
+<p>类之间有三种关系：is-a、has-a、use-a</p>
+
+<ul>
+<li>is-a关系叫做继承或者泛化，比如学生和人的关系、手机和电子产品的关系。</li>
+<li>has-a关系通常称之为关联，比如部门和员工的关系、汽车和引擎的关系都属于关联关系；关联关系如果是整体和部分的关系，那么我们称之为聚合关系；如果整体进一步负责了部分的生命周期，即整体和部分不可分割、同时存在同时消亡，那么这种就是最强的关联关系，称之为合成关系。</li>
+<li>use-a通常称之为依赖，举例：司机中有一个驾驶方法，参数中使用到了汽车，那么司机和汽车就是依赖关系。</li>
+</ul>
 
                 </section>
             </article>
